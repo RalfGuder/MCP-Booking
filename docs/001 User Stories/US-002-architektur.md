@@ -8,7 +8,7 @@ status: open
 
 # US-002: Clean Architecture
 
-**Issue:** [#2 — Architektur](https://github.com/RalfGuder/MCP-Booking/issues/2)
+**Issue:** [#2 - Architektur](https://github.com/RalfGuder/MCP-Booking/issues/2)
 
 ## Story
 

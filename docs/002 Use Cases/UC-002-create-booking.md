@@ -9,7 +9,7 @@ status: open
 
 # UC-002: Buchung anlegen
 
-**User Story:** [US-007 Tool: create_booking](../001%20User%20Stories/US-007-create-booking.md) | [Issue #7](https://github.com/RalfGuder/MCP-Booking/issues/7)
+**User Story:** [US-007](../001%20User%20Stories/US-007-create-booking.md) | [Issue #7](https://github.com/RalfGuder/MCP-Booking/issues/7)
 
 ## Akteure
 

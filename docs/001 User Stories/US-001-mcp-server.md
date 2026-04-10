@@ -8,7 +8,7 @@ status: open
 
 # US-001: MCP-Server für die Booking API
 
-**Issue:** [#1 — MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)
+**Issue:** [#1 - MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)
 
 ## Story
 

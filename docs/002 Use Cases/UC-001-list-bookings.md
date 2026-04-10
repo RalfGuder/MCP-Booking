@@ -9,7 +9,7 @@ status: open
 
 # UC-001: Buchungen auflisten
 
-**User Story:** [US-006 Tool: list_bookings](../001%20User%20Stories/US-006-list-bookings.md) | [Issue #6](https://github.com/RalfGuder/MCP-Booking/issues/6)
+**User Story:** [US-006](../001%20User%20Stories/US-006-list-bookings.md) | [Issue #6](https://github.com/RalfGuder/MCP-Booking/issues/6)
 
 ## Akteure
 

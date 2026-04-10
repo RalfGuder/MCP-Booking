@@ -8,7 +8,7 @@ status: open
 
 # US-003: Neue Projektmappe
 
-**Issue:** [#3 — Neue Projektmappe](https://github.com/RalfGuder/MCP-Booking/issues/3)
+**Issue:** [#3 - Neue Projektmappe](https://github.com/RalfGuder/MCP-Booking/issues/3)
 
 ## Story
 
