@@ -1,3 +1,4 @@
+// Copyright (c) 2026 RalfGuder. Licensed under the MIT License.
 using McpBooking.Application.UseCases;
 using McpBooking.Infrastructure;
 using McpBooking.Infrastructure.Configuration;
