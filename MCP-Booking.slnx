@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/McpBooking.Application/McpBooking.Application.csproj" />
+    <Project Path="src/McpBooking.Domain/McpBooking.Domain.csproj" />
+    <Project Path="src/McpBooking.Infrastructure/McpBooking.Infrastructure.csproj" />
+    <Project Path="src/McpBooking.Server/McpBooking.Server.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/McpBooking.Application.Tests/McpBooking.Application.Tests.csproj" />
+    <Project Path="tests/McpBooking.Domain.Tests/McpBooking.Domain.Tests.csproj" />
+    <Project Path="tests/McpBooking.Infrastructure.Tests/McpBooking.Infrastructure.Tests.csproj" />
+    <Project Path="tests/McpBooking.Server.Tests/McpBooking.Server.Tests.csproj" />
+  </Folder>
+</Solution>
