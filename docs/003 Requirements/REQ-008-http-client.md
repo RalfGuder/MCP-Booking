@@ -34,3 +34,9 @@ Der MCP-Server **muss** einen HTTP-Client bereitstellen, der Anfragen an die WP 
 - Unit-Test: Request-Aufbau (URL, Header, Body) prüfen.
 - Unit-Test: Response-Deserialisierung prüfen.
 - Integrationstest: Realer API-Aufruf gegen die WordPress-Instanz.
+
+
+## Verknüpfte Artefakte
+
+- Design-Spec: [2026-04-10-us001-mcp-server-design.md](../005%20Super%20Powers/specs/2026-04-10-us001-mcp-server-design.md)
+- Implementierungsplan: [2026-04-10-us001-mcp-server-phase1.md](../005%20Super%20Powers/plans/2026-04-10-us001-mcp-server-phase1.md)

@@ -35,3 +35,9 @@ Der MCP-Server **muss** API-Fehler (HTTP 4xx, 5xx) und Netzwerkfehler abfangen u
 - Unit-Test: Jeder HTTP-Statuscode erzeugt die erwartete Fehlermeldung.
 - Unit-Test: Netzwerkfehler erzeugen die erwartete Fehlermeldung.
 - Unit-Test: Fehler werden als MCP-isError-Antwort formatiert.
+
+
+## Verknüpfte Artefakte
+
+- Design-Spec: [2026-04-10-us001-mcp-server-design.md](../005%20Super%20Powers/specs/2026-04-10-us001-mcp-server-design.md)
+- Implementierungsplan: [2026-04-10-us001-mcp-server-phase1.md](../005%20Super%20Powers/plans/2026-04-10-us001-mcp-server-phase1.md)

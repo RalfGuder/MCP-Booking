@@ -32,3 +32,9 @@ Der MCP-Server **muss** über Umgebungsvariablen oder eine Konfigurationsdatei k
 - Unit-Test: Konfiguration aus Umgebungsvariablen lesen.
 - Unit-Test: Standardwerte werden korrekt angewendet.
 - Unit-Test: Fehlende Pflichtfelder erzeugen Fehlermeldung.
+
+
+## Verknüpfte Artefakte
+
+- Design-Spec: [2026-04-10-us001-mcp-server-design.md](../005%20Super%20Powers/specs/2026-04-10-us001-mcp-server-design.md)
+- Implementierungsplan: [2026-04-10-us001-mcp-server-phase1.md](../005%20Super%20Powers/plans/2026-04-10-us001-mcp-server-phase1.md)

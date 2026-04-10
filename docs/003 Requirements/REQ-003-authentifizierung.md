@@ -34,3 +34,9 @@ Der MCP-Server **muss** sich gegenüber der WP Booking Calendar REST API authent
 - Unit-Test: Auth-Header wird korrekt an HTTP-Requests angefügt.
 - Unit-Test: Fehlende Zugangsdaten erzeugen aussagekräftige Fehlermeldung.
 - Integrationstest: API-Aufruf mit gültigen/ungültigen Credentials.
+
+
+## Verknüpfte Artefakte
+
+- Design-Spec: [2026-04-10-us001-mcp-server-design.md](../005%20Super%20Powers/specs/2026-04-10-us001-mcp-server-design.md)
+- Implementierungsplan: [2026-04-10-us001-mcp-server-phase1.md](../005%20Super%20Powers/plans/2026-04-10-us001-mcp-server-phase1.md)

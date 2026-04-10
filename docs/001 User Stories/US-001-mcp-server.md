@@ -51,6 +51,11 @@ Die folgenden Tools werden nach erfolgreicher Umsetzung von Phase 1 ergänzt:
 - Entwicklungsmethodik: TDD (siehe [Issue #5](https://github.com/RalfGuder/MCP-Booking/issues/5))
 - Projektstruktur: Visual Studio Solution, SDK-Style (siehe [Issue #3](https://github.com/RalfGuder/MCP-Booking/issues/3))
 
+## Design & Implementierung
+
+- Design-Spec: [2026-04-10-us001-mcp-server-design.md](../005%20Super%20Powers/specs/2026-04-10-us001-mcp-server-design.md)
+- Implementierungsplan: [2026-04-10-us001-mcp-server-phase1.md](../005%20Super%20Powers/plans/2026-04-10-us001-mcp-server-phase1.md)
+
 ## Abhängigkeiten
 
 - Issue #2 (Architektur) — definiert die Schichtenstruktur

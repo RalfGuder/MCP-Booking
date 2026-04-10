@@ -2,7 +2,39 @@
 
 **Datum:** 2026-04-10
 **Scope:** Phase 1 — Kerninfrastruktur + Tool `list_resources`
-**Status:** Entwurf
+**Status:** Implementiert
+**Plan:** [2026-04-10-us001-mcp-server-phase1.md](../plans/2026-04-10-us001-mcp-server-phase1.md)
+
+## Verknüpfte Artefakte
+
+### User Stories
+
+- [US-001 MCP-Server](../../001%20User%20Stories/US-001-mcp-server.md) — Hauptanforderung (Phase 1)
+- [US-002 Architektur](../../001%20User%20Stories/US-002-architektur.md) — Clean Architecture
+- [US-003 Neue Projektmappe](../../001%20User%20Stories/US-003-neue-projektmappe.md) — Projektstruktur
+- [US-004 Programmiersprache](../../001%20User%20Stories/US-004-programmiersprache.md) — C# SDK-Style
+- [US-005 Softwaredesign](../../001%20User%20Stories/US-005-softwaredesign.md) — TDD
+- [US-014 Tool: list_resources](../../001%20User%20Stories/US-014-list-resources.md) — Erstes Tool (Phase 1)
+
+### Use Cases
+
+- [UC-009 Ressourcen auflisten](../../002%20Use%20Cases/UC-009-list-resources.md) — Use Case für list_resources
+
+### Requirements
+
+| Requirement | Titel |
+|-------------|-------|
+| [REQ-001](../../003%20Requirements/REQ-001-mcp-protokoll.md) | MCP-Protokoll-Unterstützung |
+| [REQ-002](../../003%20Requirements/REQ-002-stdio-transport.md) | stdio-Transport |
+| [REQ-003](../../003%20Requirements/REQ-003-authentifizierung.md) | API-Authentifizierung |
+| [REQ-004](../../003%20Requirements/REQ-004-konfiguration.md) | Konfigurationsmanagement |
+| [REQ-005](../../003%20Requirements/REQ-005-fehlerbehandlung.md) | Fehlerbehandlung |
+| [REQ-006](../../003%20Requirements/REQ-006-parametervalidierung.md) | Parametervalidierung |
+| [REQ-007](../../003%20Requirements/REQ-007-paginierung.md) | Paginierung |
+| [REQ-008](../../003%20Requirements/REQ-008-http-client.md) | HTTP-Client für WordPress-API |
+| [REQ-009](../../003%20Requirements/REQ-009-clean-architecture.md) | Clean Architecture |
+| [REQ-010](../../003%20Requirements/REQ-010-tdd-entwicklung.md) | Test-Driven Development |
+| [REQ-019](../../003%20Requirements/REQ-019-list-resources.md) | Tool: list_resources |
 
 ## Zusammenfassung
 

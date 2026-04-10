@@ -33,3 +33,9 @@ Der MCP-Server **muss** alle eingehenden Tool-Parameter validieren, bevor ein AP
 ## Testbarkeit
 
 - Unit-Test je Validierungsregel: Gültiger Wert → kein Fehler, ungültiger Wert → Fehlermeldung.
+
+
+## Verknüpfte Artefakte
+
+- Design-Spec: [2026-04-10-us001-mcp-server-design.md](../005%20Super%20Powers/specs/2026-04-10-us001-mcp-server-design.md)
+- Implementierungsplan: [2026-04-10-us001-mcp-server-phase1.md](../005%20Super%20Powers/plans/2026-04-10-us001-mcp-server-phase1.md)

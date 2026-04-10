@@ -32,3 +32,9 @@ Alle Listen-Endpunkte **müssen** Paginierung unterstützen. Die Parameter `page
 
 - Unit-Test: Standardwerte werden korrekt angewendet.
 - Unit-Test: Ungültige Werte (page=0, per_page=101) erzeugen Validierungsfehler.
+
+
+## Verknüpfte Artefakte
+
+- Design-Spec: [2026-04-10-us001-mcp-server-design.md](../005%20Super%20Powers/specs/2026-04-10-us001-mcp-server-design.md)
+- Implementierungsplan: [2026-04-10-us001-mcp-server-phase1.md](../005%20Super%20Powers/plans/2026-04-10-us001-mcp-server-phase1.md)

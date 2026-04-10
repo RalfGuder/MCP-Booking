@@ -31,3 +31,9 @@ Der MCP-Server **muss** über den stdio-Transport kommunizieren. Eingehende JSON
 
 - Unit-Test: JSON-RPC-Nachricht über simulierten stdin senden und Antwort auf stdout prüfen.
 - Integrationstest: Server als Prozess starten und über Pipes kommunizieren.
+
+
+## Verknüpfte Artefakte
+
+- Design-Spec: [2026-04-10-us001-mcp-server-design.md](../005%20Super%20Powers/specs/2026-04-10-us001-mcp-server-design.md)
+- Implementierungsplan: [2026-04-10-us001-mcp-server-phase1.md](../005%20Super%20Powers/plans/2026-04-10-us001-mcp-server-phase1.md)

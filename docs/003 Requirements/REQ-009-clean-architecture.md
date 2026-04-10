@@ -33,3 +33,9 @@ Das Projekt **muss** nach Clean-Architecture-Prinzipien strukturiert sein. Die A
 - Architekturtest: Domain-Projekt hat keine externen NuGet-Referenzen.
 - Architekturtest: Application-Projekt referenziert nur Domain.
 - Unit-Test: Domain- und Application-Schicht sind ohne Infrastructure testbar (mit Mocks).
+
+
+## Verknüpfte Artefakte
+
+- Design-Spec: [2026-04-10-us001-mcp-server-design.md](../005%20Super%20Powers/specs/2026-04-10-us001-mcp-server-design.md)
+- Implementierungsplan: [2026-04-10-us001-mcp-server-phase1.md](../005%20Super%20Powers/plans/2026-04-10-us001-mcp-server-phase1.md)
