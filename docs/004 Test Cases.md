@@ -86,6 +86,19 @@
 | UC-022 | TC-022 |
 | UC-023 | TC-023 |
 | UC-024 | TC-024 |
+| UC-025 | TC-025 |
+| UC-026 | TC-026 |
+| UC-027 | TC-027 |
+| UC-028 | TC-028 |
+
+## Querschnitts-Test Cases
+
+| ID | Titel | Use Case | Szenarien | Status | Datei |
+|----|-------|----------|-----------|--------|-------|
+| TC-025 | Dokumentationskommentare | [UC-025](002%20Use%20Cases/UC-025-dokumentationskommentare.md) | 3 | Ausstehend | [TC-025](004%20Test%20Cases/TC-025-dokumentationskommentare.md) |
+| TC-026 | MSTest.Sdk-Style | [UC-026](002%20Use%20Cases/UC-026-teststyle.md) | 4 | Ausstehend | [TC-026](004%20Test%20Cases/TC-026-teststyle.md) |
+| TC-027 | Lokalisierung | [UC-027](002%20Use%20Cases/UC-027-lokalisierung.md) | 5 | Ausstehend | [TC-027](004%20Test%20Cases/TC-027-lokalisierung.md) |
+| TC-028 | Harte Zeichenfolgen | [UC-028](002%20Use%20Cases/UC-028-harte-zeichenfolgen.md) | 3 | Ausstehend | [TC-028](004%20Test%20Cases/TC-028-harte-zeichenfolgen.md) |
 
 ## Test Case Struktur
 

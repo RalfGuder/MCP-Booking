@@ -98,10 +98,19 @@ US-001 MCP-Server
    - 5d. Form-Tools (US-022–US-026)
    - 5e. Settings-Tools (US-027–US-029)
 
+## Querschnittsanforderungen
+
+| ID | Titel | Issue | Datei | Beschreibung |
+|----|-------|-------|-------|--------------|
+| US-030 | Dokumentationskommentare | [#30](https://github.com/RalfGuder/MCP-Booking/issues/30) | [US-030](001%20User%20Stories/US-030-dokumentationskommentare.md) | Englische XML-Docs für alle öffentlichen Member |
+| US-031 | Teststyle | [#31](https://github.com/RalfGuder/MCP-Booking/issues/31) | [US-031](001%20User%20Stories/US-031-teststyle.md) | MSTest.Sdk-Style für alle Test-Projekte |
+| US-032 | Lokalisierung | [#32](https://github.com/RalfGuder/MCP-Booking/issues/32) | [US-032](001%20User%20Stories/US-032-lokalisierung.md) | Messages.resx in DE, EN, FR, ES |
+| US-033 | Harte Zeichenfolgen | [#33](https://github.com/RalfGuder/MCP-Booking/issues/33) | [US-033](001%20User%20Stories/US-033-harte-zeichenfolgen.md) | Base64-codierte Strings in Properties/Strings.cs |
+
 ## Zusammenfassung
 
 Das Projekt hat das Ziel, einen **MCP-Server** (Model Context Protocol) in **C#** zu entwickeln, der die REST API des WordPress-Plugins *WP Booking Calendar* kapselt. Dadurch können KI-Assistenten wie Claude Buchungen, Ressourcen, Verfügbarkeiten, Formulare und Einstellungen des Kulturvereins Milower Land e.V. verwalten.
 
-Die Architektur folgt **Clean Architecture** mit vier Schichten, die als separate Projekte in einer Visual Studio Solution organisiert werden. Die Entwicklung erfolgt nach dem **TDD**-Ansatz (Red-Green-Refactor) mit xUnit als Test-Framework.
+Die Architektur folgt **Clean Architecture** mit vier Schichten, die als separate Projekte in einer Visual Studio Solution organisiert werden.
 
-Insgesamt umfasst der MCP-Server **24 Tools** (8 Booking, 5 Resource, 3 Availability, 5 Form, 3 Settings), die jeweils einen API-Endpunkt kapseln.
+Insgesamt umfasst der MCP-Server **24 Tools** (8 Booking, 5 Resource, 3 Availability, 5 Form, 3 Settings) und **4 Querschnittsanforderungen** (Dokumentation, Teststyle, Lokalisierung, Base64-Strings).

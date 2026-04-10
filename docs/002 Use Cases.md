@@ -82,6 +82,15 @@
 | US-028 | UC-023 |
 | US-029 | UC-024 |
 
+## Querschnittsanforderungen
+
+| ID | Titel | User Story | Datei |
+|----|-------|------------|-------|
+| UC-025 | Dokumentationskommentare pflegen | [US-030](001%20User%20Stories/US-030-dokumentationskommentare.md) | [UC-025](002%20Use%20Cases/UC-025-dokumentationskommentare.md) |
+| UC-026 | MSTest.Sdk-Style für Test-Projekte | [US-031](001%20User%20Stories/US-031-teststyle.md) | [UC-026](002%20Use%20Cases/UC-026-teststyle.md) |
+| UC-027 | Nutzermeldungen lokalisieren | [US-032](001%20User%20Stories/US-032-lokalisierung.md) | [UC-027](002%20Use%20Cases/UC-027-lokalisierung.md) |
+| UC-028 | Harte Zeichenfolgen Base64-codieren | [US-033](001%20User%20Stories/US-033-harte-zeichenfolgen.md) | [UC-028](002%20Use%20Cases/UC-028-harte-zeichenfolgen.md) |
+
 ## Use Case Struktur
 
 Jeder Use Case folgt dieser Struktur:

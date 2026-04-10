@@ -99,6 +99,19 @@
 | US-027 | UC-022 | REQ-032, REQ-005 |
 | US-028 | UC-023 | REQ-033, REQ-005, REQ-006 |
 | US-029 | UC-024 | REQ-034, REQ-005, REQ-006 |
+| US-030 | UC-025 | REQ-035 |
+| US-031 | UC-026 | REQ-036 |
+| US-032 | UC-027 | REQ-037 |
+| US-033 | UC-028 | REQ-038 |
+
+## Querschnitts-Requirements
+
+| ID | Titel | Priorität | Datei |
+|----|-------|-----------|-------|
+| REQ-035 | Dokumentationskommentare | mittel | [REQ-035](003%20Requirements/REQ-035-dokumentationskommentare.md) |
+| REQ-036 | MSTest.Sdk-Style | hoch | [REQ-036](003%20Requirements/REQ-036-teststyle-mstest.md) |
+| REQ-037 | Lokalisierung | mittel | [REQ-037](003%20Requirements/REQ-037-lokalisierung.md) |
+| REQ-038 | Harte Zeichenfolgen (Base64) | mittel | [REQ-038](003%20Requirements/REQ-038-harte-zeichenfolgen.md) |
 
 ## Requirement-Struktur
 
