@@ -1,0 +1,600 @@
+openapi: 3.0.3
+info:
+  title: WP Booking Calendar REST API
+  description: REST API for the WP Booking Calendar plugin on kv-milowerland.de.
+  version: "1.0"
+  license:
+    name: MIT
+servers:
+  - url: https://kv-milowerland.de/wp-json/wpbc/v1
+
+paths:
+  /:
+    get:
+      summary: API index
+      description: Returns the namespace route index.
+      operationId: getIndex
+      parameters:
+        - name: namespace
+          in: query
+          schema:
+            type: string
+            default: wpbc/v1
+        - name: context
+          in: query
+          schema:
+            type: string
+            default: view
+      responses:
+        "200":
+          description: Successful response
+
+  /bookings:
+    get:
+      summary: List bookings
+      operationId: listBookings
+      parameters:
+        - name: page
+          in: query
+          description: Current page of the collection.
+          schema:
+            type: integer
+            default: 1
+            minimum: 1
+        - name: per_page
+          in: query
+          description: Maximum number of items to be returned per page.
+          schema:
+            type: integer
+            default: 20
+            minimum: 1
+            maximum: 100
+        - name: resource_id
+          in: query
+          description: Filter by resource (booking type) ID.
+          schema:
+            type: integer
+        - name: status
+          in: query
+          description: Filter by booking status.
+          schema:
+            type: string
+            enum:
+              - pending
+              - approved
+              - trash
+        - name: date_from
+          in: query
+          description: Filter bookings from this date (ISO 8601).
+          schema:
+            type: string
+            format: date
+        - name: date_to
+          in: query
+          description: Filter bookings up to this date (ISO 8601).
+          schema:
+            type: string
+            format: date
+        - name: is_new
+          in: query
+          description: Filter by new/unread status.
+          schema:
+            type: boolean
+        - name: search
+          in: query
+          description: Search bookings by keyword.
+          schema:
+            type: string
+        - name: orderby
+          in: query
+          description: Sort collection by field.
+          schema:
+            type: string
+            default: sort_date
+            enum:
+              - booking_id
+              - sort_date
+              - modification_date
+        - name: order
+          in: query
+          description: Order sort direction.
+          schema:
+            type: string
+            default: DESC
+            enum:
+              - ASC
+              - DESC
+      responses:
+        "200":
+          description: List of bookings
+    post:
+      summary: Create a booking
+      operationId: createBooking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - booking_type
+                - form_data
+                - dates
+              properties:
+                booking_type:
+                  type: integer
+                  description: Resource / booking type ID.
+                form_data:
+                  type: object
+                  description: Submitted form fields.
+                dates:
+                  type: array
+                  description: Array of requested booking dates.
+                  items:
+                    type: string
+                    format: date-time
+      responses:
+        "201":
+          description: Booking created
+
+  /bookings/{id}:
+    parameters:
+      - $ref: "#/components/parameters/BookingId"
+    get:
+      summary: Get a booking
+      operationId: getBooking
+      responses:
+        "200":
+          description: Booking details
+        "404":
+          description: Booking not found
+    put:
+      summary: Update a booking
+      operationId: updateBooking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                form_data:
+                  type: object
+                  description: Submitted form fields.
+                booking_type:
+                  type: integer
+                  description: Resource / booking type ID.
+                status:
+                  type: string
+                  description: Booking status.
+      responses:
+        "200":
+          description: Booking updated
+        "404":
+          description: Booking not found
+    delete:
+      summary: Delete a booking
+      operationId: deleteBooking
+      responses:
+        "200":
+          description: Booking deleted
+        "404":
+          description: Booking not found
+
+  /bookings/{id}/approve:
+    parameters:
+      - $ref: "#/components/parameters/BookingId"
+    post:
+      summary: Approve a booking
+      operationId: approveBooking
+      responses:
+        "200":
+          description: Booking approved
+        "404":
+          description: Booking not found
+
+  /bookings/{id}/pending:
+    parameters:
+      - $ref: "#/components/parameters/BookingId"
+    post:
+      summary: Set booking to pending
+      operationId: pendingBooking
+      responses:
+        "200":
+          description: Booking set to pending
+        "404":
+          description: Booking not found
+
+  /bookings/{id}/note:
+    parameters:
+      - $ref: "#/components/parameters/BookingId"
+    put:
+      summary: Attach a note to a booking
+      operationId: updateBookingNote
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - note
+              properties:
+                note:
+                  type: string
+                  description: Note text to attach to the booking.
+      responses:
+        "200":
+          description: Note attached
+        "404":
+          description: Booking not found
+
+  /resources:
+    get:
+      summary: List resources
+      operationId: listResources
+      parameters:
+        - name: page
+          in: query
+          description: Current page of the collection.
+          schema:
+            type: integer
+            default: 1
+            minimum: 1
+        - name: per_page
+          in: query
+          description: Maximum number of items to be returned per page.
+          schema:
+            type: integer
+            default: 20
+            minimum: 1
+            maximum: 100
+      responses:
+        "200":
+          description: List of resources
+    post:
+      summary: Create a resource
+      operationId: createResource
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - title
+              properties:
+                title:
+                  type: string
+                  description: Display name of the resource.
+                cost:
+                  type: string
+                  description: Cost associated with the resource.
+                visitors:
+                  type: integer
+                  description: Number of visitors allowed.
+      responses:
+        "201":
+          description: Resource created
+
+  /resources/{id}:
+    parameters:
+      - $ref: "#/components/parameters/ResourceId"
+    get:
+      summary: Get a resource
+      operationId: getResource
+      responses:
+        "200":
+          description: Resource details
+        "404":
+          description: Resource not found
+    put:
+      summary: Update a resource
+      operationId: updateResource
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: Display name of the resource.
+                cost:
+                  type: string
+                  description: Cost associated with the resource.
+                visitors:
+                  type: integer
+                  description: Number of visitors allowed.
+      responses:
+        "200":
+          description: Resource updated
+        "404":
+          description: Resource not found
+    delete:
+      summary: Delete a resource
+      operationId: deleteResource
+      responses:
+        "200":
+          description: Resource deleted
+        "404":
+          description: Resource not found
+
+  /availability/{resource_id}:
+    parameters:
+      - $ref: "#/components/parameters/AvailabilityResourceId"
+    get:
+      summary: Get availability for a resource
+      operationId: getAvailability
+      parameters:
+        - name: date_from
+          in: query
+          required: true
+          description: Start date (ISO 8601).
+          schema:
+            type: string
+            format: date
+        - name: date_to
+          in: query
+          required: true
+          description: End date (ISO 8601).
+          schema:
+            type: string
+            format: date
+        - name: prop_name
+          in: query
+          description: Filter by property name.
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Availability data
+        "404":
+          description: Resource not found
+    put:
+      summary: Update availability for a resource
+      operationId: updateAvailability
+      responses:
+        "200":
+          description: Availability updated
+        "404":
+          description: Resource not found
+
+  /availability/{resource_id}/dates:
+    parameters:
+      - $ref: "#/components/parameters/AvailabilityResourceId"
+    get:
+      summary: Get available dates for a resource
+      operationId: getAvailabilityDates
+      parameters:
+        - name: date_from
+          in: query
+          required: true
+          description: Start date (ISO 8601).
+          schema:
+            type: string
+            format: date
+        - name: date_to
+          in: query
+          required: true
+          description: End date (ISO 8601).
+          schema:
+            type: string
+            format: date
+        - name: prop_name
+          in: query
+          description: Filter by property name.
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Available dates
+
+  /forms:
+    get:
+      summary: List forms
+      operationId: listForms
+      parameters:
+        - name: page
+          in: query
+          description: Current page of the collection.
+          schema:
+            type: integer
+            default: 1
+            minimum: 1
+        - name: per_page
+          in: query
+          description: Maximum number of items to be returned per page.
+          schema:
+            type: integer
+            default: 20
+            minimum: 1
+            maximum: 100
+      responses:
+        "200":
+          description: List of forms
+    post:
+      summary: Create a form
+      operationId: createForm
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - title
+                - structure_json
+              properties:
+                title:
+                  type: string
+                  description: Display name of the form.
+                form_slug:
+                  type: string
+                  description: URL-friendly slug for the form.
+                structure_json:
+                  type: string
+                  description: JSON string defining the form structure.
+                settings_json:
+                  type: string
+                  description: JSON string with form settings.
+                status:
+                  type: string
+                  description: Publication status of the form.
+                  enum:
+                    - published
+                    - draft
+      responses:
+        "201":
+          description: Form created
+
+  /forms/{id}:
+    parameters:
+      - $ref: "#/components/parameters/FormId"
+    get:
+      summary: Get a form
+      operationId: getForm
+      responses:
+        "200":
+          description: Form details
+        "404":
+          description: Form not found
+    put:
+      summary: Update a form
+      operationId: updateForm
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: Display name of the form.
+                form_slug:
+                  type: string
+                  description: URL-friendly slug for the form.
+                structure_json:
+                  type: string
+                  description: JSON string defining the form structure.
+                settings_json:
+                  type: string
+                  description: JSON string with form settings.
+                status:
+                  type: string
+                  description: Publication status of the form.
+                  enum:
+                    - published
+                    - draft
+      responses:
+        "200":
+          description: Form updated
+        "404":
+          description: Form not found
+    delete:
+      summary: Delete a form
+      operationId: deleteForm
+      responses:
+        "200":
+          description: Form deleted
+        "404":
+          description: Form not found
+
+  /settings:
+    get:
+      summary: Get all settings
+      operationId: getSettings
+      responses:
+        "200":
+          description: All settings
+    put:
+      summary: Update settings
+      operationId: updateSettings
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                calendar:
+                  type: object
+                  description: Calendar display and behaviour settings.
+                booking:
+                  type: object
+                  description: Booking workflow settings.
+                ui:
+                  type: object
+                  description: User-interface customisation settings.
+                confirmation:
+                  type: object
+                  description: Confirmation and notification settings.
+      responses:
+        "200":
+          description: Settings updated
+
+  /settings/{group}:
+    parameters:
+      - name: group
+        in: path
+        required: true
+        schema:
+          type: string
+          pattern: "^[a-z_]+$"
+    get:
+      summary: Get settings for a specific group
+      operationId: getSettingsGroup
+      responses:
+        "200":
+          description: Settings group
+        "404":
+          description: Group not found
+
+  /openapi.json:
+    get:
+      summary: OpenAPI specification
+      operationId: getOpenApiSpec
+      responses:
+        "200":
+          description: OpenAPI JSON document
+
+  /docs:
+    get:
+      summary: API documentation
+      operationId: getDocs
+      responses:
+        "200":
+          description: API documentation page
+
+components:
+  parameters:
+    BookingId:
+      name: id
+      in: path
+      required: true
+      description: Unique identifier for the booking.
+      schema:
+        type: integer
+    ResourceId:
+      name: id
+      in: path
+      required: true
+      description: Unique identifier for the resource.
+      schema:
+        type: integer
+    FormId:
+      name: id
+      in: path
+      required: true
+      description: Unique identifier for the form.
+      schema:
+        type: integer
+    AvailabilityResourceId:
+      name: resource_id
+      in: path
+      required: true
+      description: Resource ID.
+      schema:
+        type: integer
