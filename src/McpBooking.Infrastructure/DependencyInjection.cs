@@ -1,3 +1,4 @@
+// Copyright (c) 2026 RalfGuder. Licensed under the MIT License.
 using System.Net.Http.Headers;
 using System.Text;
 using McpBooking.Domain.Interfaces;
@@ -8,8 +9,17 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace McpBooking.Infrastructure;
 
+/// <summary>
+/// Provides extension methods for registering infrastructure services with the dependency injection container.
+/// </summary>
 public static class DependencyInjection
 {
+    /// <summary>
+    /// Registers all infrastructure services required by the application.
+    /// </summary>
+    /// <param name="services">The service collection to add services to.</param>
+    /// <param name="options">The booking API configuration options.</param>
+    /// <returns>The updated <see cref="IServiceCollection"/> for chaining.</returns>
     public static IServiceCollection AddInfrastructure(
         this IServiceCollection services, BookingApiOptions options)
     {

@@ -3,13 +3,14 @@ using System.Text.Json;
 using McpBooking.Domain.Entities;
 using McpBooking.Infrastructure.Http;
 using McpBooking.Infrastructure.Repositories;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Moq.Protected;
 using Shouldly;
-using Xunit;
 
 namespace McpBooking.Infrastructure.Tests.Repositories;
 
+[TestClass]
 public class ResourceRepositoryTests
 {
     private static (ResourceRepository repo, Mock<HttpMessageHandler> handlerMock) CreateRepoWithMockHttp(
@@ -36,7 +37,7 @@ public class ResourceRepositoryTests
         return (repo, handlerMock);
     }
 
-    [Fact]
+    [TestMethod]
     public async Task ListAsync_ReturnsDeserializedResources()
     {
         var json = JsonSerializer.Serialize(new[]
@@ -57,7 +58,7 @@ public class ResourceRepositoryTests
         result[1].Title.ShouldBe("Vereinsraum");
     }
 
-    [Fact]
+    [TestMethod]
     public async Task ListAsync_EmptyArray_ReturnsEmptyList()
     {
         var (repo, _) = CreateRepoWithMockHttp(HttpStatusCode.OK, "[]");
@@ -67,7 +68,7 @@ public class ResourceRepositoryTests
         result.ShouldBeEmpty();
     }
 
-    [Fact]
+    [TestMethod]
     public async Task ListAsync_SendsCorrectQueryParameters()
     {
         var (repo, handlerMock) = CreateRepoWithMockHttp(HttpStatusCode.OK, "[]");

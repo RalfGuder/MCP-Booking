@@ -1,6 +1,8 @@
+// Copyright (c) 2026 RalfGuder. Licensed under the MIT License.
 using McpBooking.Application.UseCases;
 using McpBooking.Infrastructure;
 using McpBooking.Infrastructure.Configuration;
+using McpBooking.Server.Properties;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -8,12 +10,12 @@ var builder = Host.CreateApplicationBuilder(args);
 
 var options = new BookingApiOptions
 {
-    BaseUrl = Environment.GetEnvironmentVariable("WPBC_API_URL")
-              ?? "https://kv-milowerland.de/wp-json/wpbc/v1",
-    Username = Environment.GetEnvironmentVariable("WPBC_USERNAME")
-              ?? throw new InvalidOperationException("Umgebungsvariable WPBC_USERNAME ist nicht gesetzt."),
-    Password = Environment.GetEnvironmentVariable("WPBC_PASSWORD")
-              ?? throw new InvalidOperationException("Umgebungsvariable WPBC_PASSWORD ist nicht gesetzt.")
+    BaseUrl = Environment.GetEnvironmentVariable(Strings.EnvVarApiUrl)
+              ?? Strings.DefaultApiBaseUrl,
+    Username = Environment.GetEnvironmentVariable(Strings.EnvVarUsername)
+              ?? throw new InvalidOperationException(Strings.ErrorMissingUsername),
+    Password = Environment.GetEnvironmentVariable(Strings.EnvVarPassword)
+              ?? throw new InvalidOperationException(Strings.ErrorMissingPassword)
 };
 
 builder.Services.AddInfrastructure(options);
