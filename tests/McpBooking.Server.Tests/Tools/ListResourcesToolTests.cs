@@ -4,12 +4,13 @@ using McpBooking.Application.DTOs;
 using McpBooking.Application.UseCases;
 using McpBooking.Domain.Interfaces;
 using McpBooking.Server.Tools;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Shouldly;
-using Xunit;
 
 namespace McpBooking.Server.Tests.Tools;
 
+[TestClass]
 public class ListResourcesToolTests
 {
     private static ListResourcesTool CreateToolWithMockUseCase(
@@ -29,7 +30,7 @@ public class ListResourcesToolTests
         return new ListResourcesTool(useCaseMock.Object);
     }
 
-    [Fact]
+    [TestMethod]
     public async Task ExecuteAsync_ValidParams_ReturnsJson()
     {
         var resources = new List<ResourceDto>
@@ -46,7 +47,7 @@ public class ListResourcesToolTests
         doc.RootElement[0].GetProperty("title").GetString().ShouldBe("Gemeindesaal");
     }
 
-    [Fact]
+    [TestMethod]
     public async Task ExecuteAsync_InvalidPage_ReturnsError()
     {
         var tool = CreateToolWithMockUseCase();
@@ -56,7 +57,7 @@ public class ListResourcesToolTests
         result.ShouldContain("page muss >= 1 sein");
     }
 
-    [Fact]
+    [TestMethod]
     public async Task ExecuteAsync_InvalidPerPage_ReturnsError()
     {
         var tool = CreateToolWithMockUseCase();
@@ -66,7 +67,7 @@ public class ListResourcesToolTests
         result.ShouldContain("per_page muss zwischen 1 und 100 liegen");
     }
 
-    [Fact]
+    [TestMethod]
     public async Task ExecuteAsync_AuthError_ReturnsReadableMessage()
     {
         var tool = CreateToolWithMockUseCase(

@@ -2,15 +2,16 @@ using McpBooking.Application.DTOs;
 using McpBooking.Application.UseCases;
 using McpBooking.Domain.Entities;
 using McpBooking.Domain.Interfaces;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Shouldly;
-using Xunit;
 
 namespace McpBooking.Application.Tests.UseCases;
 
+[TestClass]
 public class ListResourcesUseCaseTests
 {
-    [Fact]
+    [TestMethod]
     public async Task ExecuteAsync_ReturnsResources_MappedToDtos()
     {
         var mock = new Mock<IResourceRepository>();
@@ -29,7 +30,7 @@ public class ListResourcesUseCaseTests
         result[1].ShouldBe(new ResourceDto(2, "Vereinsraum", null, null));
     }
 
-    [Fact]
+    [TestMethod]
     public async Task ExecuteAsync_EmptyList_ReturnsEmptyCollection()
     {
         var mock = new Mock<IResourceRepository>();
@@ -42,7 +43,7 @@ public class ListResourcesUseCaseTests
         result.ShouldBeEmpty();
     }
 
-    [Fact]
+    [TestMethod]
     public async Task ExecuteAsync_PassesPaginationParameters()
     {
         var mock = new Mock<IResourceRepository>();
