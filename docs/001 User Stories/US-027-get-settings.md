@@ -1,6 +1,6 @@
-# User Story: Tool get_settings
+# User Story: Tool list_settings
 
-**Issue:** [#27 — US-027 Tool: get_settings](https://github.com/RalfGuder/MCP-Booking/issues/27)
+**Issue:** [#27 — US-027 Tool: list_settings](https://github.com/RalfGuder/MCP-Booking/issues/27)
 **Parent:** [#1 — US-001 MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)
 
 ## Endpoint
@@ -19,7 +19,7 @@ Keine Parameter erforderlich.
 
 ## Akzeptanzkriterien
 
-- [ ] MCP-Tool `get_settings` ist registriert und aufrufbar
+- [ ] MCP-Tool `list_settings` ist registriert und aufrufbar
 - [ ] Alle Einstellungsgruppen werden zurueckgegeben
 - [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
 - [ ] Unit-Test: Erfolgreicher Abruf
