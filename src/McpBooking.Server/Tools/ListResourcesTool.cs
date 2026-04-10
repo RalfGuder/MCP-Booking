@@ -2,6 +2,7 @@ using System.ComponentModel;
 using System.Net;
 using System.Text.Json;
 using McpBooking.Application.UseCases;
+using McpBooking.Server.Properties;
 using ModelContextProtocol.Server;
 
 namespace McpBooking.Server.Tools;
@@ -28,8 +29,8 @@ public class ListResourcesTool
         [Description("Einträge pro Seite (Standard: 20, Max: 100)")] int perPage = 20,
         CancellationToken ct = default)
     {
-        if (page < 1) return "Fehler: page muss >= 1 sein.";
-        if (perPage < 1 || perPage > 100) return "Fehler: per_page muss zwischen 1 und 100 liegen.";
+        if (page < 1) return Messages.ErrorPageInvalid;
+        if (perPage < 1 || perPage > 100) return Messages.ErrorPerPageInvalid;
 
         try
         {
@@ -38,19 +39,19 @@ public class ListResourcesTool
         }
         catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.Unauthorized)
         {
-            return "Fehler: Authentifizierung fehlgeschlagen. Bitte API-Zugangsdaten prüfen.";
+            return Messages.ErrorAuthenticationFailed;
         }
         catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.Forbidden)
         {
-            return "Fehler: Keine Berechtigung für diese Aktion.";
+            return Messages.ErrorForbidden;
         }
         catch (HttpRequestException ex) when (ex.StatusCode >= HttpStatusCode.InternalServerError)
         {
-            return "Fehler: Serverfehler bei der Booking API.";
+            return Messages.ErrorServerError;
         }
         catch (HttpRequestException)
         {
-            return "Fehler: Die Booking API ist nicht erreichbar.";
+            return Messages.ErrorApiUnreachable;
         }
     }
 }
