@@ -61,3 +61,8 @@ Strukturiertes Objekt mit:
 
 - Die Buchung existiert nicht mehr im System.
 - Die Verfügbarkeit der zugehörigen Ressource für die freigegebenen Daten ist wiederhergestellt.
+
+
+## Test Case
+
+- [TC-005](../004%20Test%20Cases/TC-005-delete-booking.md)

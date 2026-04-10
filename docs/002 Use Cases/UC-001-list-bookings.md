@@ -87,3 +87,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Keine Zustandsänderung im System (lesender Zugriff).
+
+
+## Test Case
+
+- [TC-001](../004%20Test%20Cases/TC-001-list-bookings.md)

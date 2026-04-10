@@ -58,3 +58,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Keine Zustandsänderung im System (lesender Zugriff).
+
+
+## Test Case
+
+- [TC-022](../004%20Test%20Cases/TC-022-list-settings.md)

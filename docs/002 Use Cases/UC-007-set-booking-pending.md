@@ -64,3 +64,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Der Status der Buchung ist `pending`.
+
+
+## Test Case
+
+- [TC-007](../004%20Test%20Cases/TC-007-set-booking-pending.md)

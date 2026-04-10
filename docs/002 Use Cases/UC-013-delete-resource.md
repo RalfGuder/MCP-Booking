@@ -61,3 +61,8 @@ Strukturiertes Objekt mit:
 
 - Die Ressource existiert nicht mehr im System.
 - Bestehende Buchungen für diese Ressource sind davon potenziell betroffen.
+
+
+## Test Case
+
+- [TC-013](../004%20Test%20Cases/TC-013-delete-resource.md)

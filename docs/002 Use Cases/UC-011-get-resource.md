@@ -59,3 +59,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Keine Zustandsänderung im System (lesender Zugriff).
+
+
+## Test Case
+
+- [TC-011](../004%20Test%20Cases/TC-011-get-resource.md)

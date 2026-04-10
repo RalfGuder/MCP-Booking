@@ -65,3 +65,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Der Status der Buchung ist `approved`.
+
+
+## Test Case
+
+- [TC-006](../004%20Test%20Cases/TC-006-approve-booking.md)

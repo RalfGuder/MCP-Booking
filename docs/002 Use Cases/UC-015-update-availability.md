@@ -59,3 +59,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Die Verfügbarkeit der Ressource ist gemäß den Änderungen aktualisiert.
+
+
+## Test Case
+
+- [TC-015](../004%20Test%20Cases/TC-015-update-availability.md)

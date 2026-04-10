@@ -68,3 +68,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Die Einstellungen im System sind gemäß den Änderungen aktualisiert.
+
+
+## Test Case
+
+- [TC-023](../004%20Test%20Cases/TC-023-update-settings.md)

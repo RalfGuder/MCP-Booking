@@ -67,3 +67,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Die Ressource im System wurde mit den neuen Werten aktualisiert.
+
+
+## Test Case
+
+- [TC-012](../004%20Test%20Cases/TC-012-update-resource.md)

@@ -73,3 +73,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Die Buchung im System wurde mit den neuen Werten aktualisiert.
+
+
+## Test Case
+
+- [TC-004](../004%20Test%20Cases/TC-004-update-booking.md)

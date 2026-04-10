@@ -62,3 +62,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Keine Zustandsänderung im System (lesender Zugriff).
+
+
+## Test Case
+
+- [TC-024](../004%20Test%20Cases/TC-024-get-settings-group.md)

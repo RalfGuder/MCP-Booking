@@ -67,3 +67,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Keine Zustandsänderung im System (lesender Zugriff).
+
+
+## Test Case
+
+- [TC-014](../004%20Test%20Cases/TC-014-get-availability.md)

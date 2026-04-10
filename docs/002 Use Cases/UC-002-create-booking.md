@@ -78,3 +78,8 @@ Strukturiertes Objekt mit:
 
 - Eine neue Buchung existiert im System (Status: `pending` oder `approved`).
 - Die Verfügbarkeit der Ressource für die gebuchten Daten ist aktualisiert.
+
+
+## Test Case
+
+- [TC-002](../004%20Test%20Cases/TC-002-create-booking.md)

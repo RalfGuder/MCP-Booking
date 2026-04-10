@@ -67,3 +67,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Ein neues Formular existiert im System (Status: `published` oder `draft`).
+
+
+## Test Case
+
+- [TC-018](../004%20Test%20Cases/TC-018-create-form.md)

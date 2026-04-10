@@ -73,3 +73,8 @@ Strukturiertes Objekt mit:
 - Requirement: [REQ-019 Tool: list_resources](../003%20Requirements/REQ-019-list-resources.md)
 - Design-Spec: [2026-04-10-us001-mcp-server-design.md](../005%20Super%20Powers/specs/2026-04-10-us001-mcp-server-design.md)
 - Implementierungsplan: [2026-04-10-us001-mcp-server-phase1.md](../005%20Super%20Powers/plans/2026-04-10-us001-mcp-server-phase1.md)
+
+
+## Test Case
+
+- [TC-009](../004%20Test%20Cases/TC-009-list-resources.md)

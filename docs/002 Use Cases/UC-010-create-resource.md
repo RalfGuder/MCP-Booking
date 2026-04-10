@@ -61,3 +61,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Eine neue Ressource existiert im System.
+
+
+## Test Case
+
+- [TC-010](../004%20Test%20Cases/TC-010-create-resource.md)

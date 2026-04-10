@@ -67,3 +67,8 @@ Strukturiertes Objekt mit allen Buchungsdetails:
 ## Nachbedingungen
 
 - Keine Zustandsänderung im System (lesender Zugriff).
+
+
+## Test Case
+
+- [TC-003](../004%20Test%20Cases/TC-003-get-booking.md)

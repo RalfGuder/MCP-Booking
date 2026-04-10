@@ -72,3 +72,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Keine Zustandsänderung im System (lesender Zugriff).
+
+
+## Test Case
+
+- [TC-016](../004%20Test%20Cases/TC-016-get-availability-dates.md)

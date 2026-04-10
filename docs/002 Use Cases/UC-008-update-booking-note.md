@@ -65,3 +65,8 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Die Notiz ist der Buchung zugeordnet.
+
+
+## Test Case
+
+- [TC-008](../004%20Test%20Cases/TC-008-update-booking-note.md)
