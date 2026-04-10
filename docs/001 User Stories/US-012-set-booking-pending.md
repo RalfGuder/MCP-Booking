@@ -1,4 +1,12 @@
-# User Story: Tool set_booking_pending
+---
+id: "012"
+title: Tool set_booking_pending
+tags:
+  - UserStory
+status: open
+---
+
+# US-012: Tool set_booking_pending
 
 **Issue:** [#12 — US-012 Tool: set_booking_pending](https://github.com/RalfGuder/MCP-Booking/issues/12)
 **Parent:** [#1 — US-001 MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)

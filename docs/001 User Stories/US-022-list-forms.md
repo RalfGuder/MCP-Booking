@@ -1,4 +1,12 @@
-# User Story: Tool list_forms
+---
+id: "022"
+title: Tool list_forms
+tags:
+  - UserStory
+status: open
+---
+
+# US-022: Tool list_forms
 
 **Issue:** [#22 — US-022 Tool: list_forms](https://github.com/RalfGuder/MCP-Booking/issues/22)
 **Parent:** [#1 — US-001 MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)

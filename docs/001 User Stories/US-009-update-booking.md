@@ -1,4 +1,12 @@
-# User Story: Tool update_booking
+---
+id: "009"
+title: Tool update_booking
+tags:
+  - UserStory
+status: open
+---
+
+# US-009: Tool update_booking
 
 **Issue:** [#9 — US-009 Tool: update_booking](https://github.com/RalfGuder/MCP-Booking/issues/9)
 **Parent:** [#1 — US-001 MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)

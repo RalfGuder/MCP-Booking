@@ -1,4 +1,12 @@
-# User Story: Tool get_settings_group
+---
+id: "029"
+title: Tool get_settings_group
+tags:
+  - UserStory
+status: open
+---
+
+# US-029: Tool get_settings_group
 
 **Issue:** [#29 — US-029 Tool: get_settings_group](https://github.com/RalfGuder/MCP-Booking/issues/29)
 **Parent:** [#1 — US-001 MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)

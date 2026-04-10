@@ -1,4 +1,12 @@
-# User Story: Tool update_settings
+---
+id: "028"
+title: Tool update_settings
+tags:
+  - UserStory
+status: open
+---
+
+# US-028: Tool update_settings
 
 **Issue:** [#28 — US-028 Tool: update_settings](https://github.com/RalfGuder/MCP-Booking/issues/28)
 **Parent:** [#1 — US-001 MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)

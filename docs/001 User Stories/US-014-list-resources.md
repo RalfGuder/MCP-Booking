@@ -1,4 +1,12 @@
-# User Story: Tool list_resources
+---
+id: "014"
+title: Tool list_resources
+tags:
+  - UserStory
+status: open
+---
+
+# US-014: Tool list_resources
 
 **Issue:** [#14 — US-014 Tool: list_resources](https://github.com/RalfGuder/MCP-Booking/issues/14)
 **Parent:** [#1 — US-001 MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)

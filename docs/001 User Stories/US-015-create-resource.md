@@ -1,4 +1,12 @@
-# User Story: Tool create_resource
+---
+id: "015"
+title: Tool create_resource
+tags:
+  - UserStory
+status: open
+---
+
+# US-015: Tool create_resource
 
 **Issue:** [#15 — US-015 Tool: create_resource](https://github.com/RalfGuder/MCP-Booking/issues/15)
 **Parent:** [#1 — US-001 MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)

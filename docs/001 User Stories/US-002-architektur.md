@@ -1,4 +1,12 @@
-# User Story: Clean Architecture
+---
+id: "002"
+title: Clean Architecture
+tags:
+  - UserStory
+status: open
+---
+
+# US-002: Clean Architecture
 
 **Issue:** [#2 — Architektur](https://github.com/RalfGuder/MCP-Booking/issues/2)
 

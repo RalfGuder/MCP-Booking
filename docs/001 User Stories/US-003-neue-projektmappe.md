@@ -1,4 +1,12 @@
-# User Story: Neue Projektmappe
+---
+id: "003"
+title: Neue Projektmappe
+tags:
+  - UserStory
+status: open
+---
+
+# US-003: Neue Projektmappe
 
 **Issue:** [#3 — Neue Projektmappe](https://github.com/RalfGuder/MCP-Booking/issues/3)
 

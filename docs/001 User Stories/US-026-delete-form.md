@@ -1,4 +1,12 @@
-# User Story: Tool delete_form
+---
+id: "026"
+title: Tool delete_form
+tags:
+  - UserStory
+status: open
+---
+
+# US-026: Tool delete_form
 
 **Issue:** [#26 — US-026 Tool: delete_form](https://github.com/RalfGuder/MCP-Booking/issues/26)
 **Parent:** [#1 — US-001 MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)

@@ -1,4 +1,12 @@
-# User Story: Tool get_form
+---
+id: "024"
+title: Tool get_form
+tags:
+  - UserStory
+status: open
+---
+
+# US-024: Tool get_form
 
 **Issue:** [#24 — US-024 Tool: get_form](https://github.com/RalfGuder/MCP-Booking/issues/24)
 **Parent:** [#1 — US-001 MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)

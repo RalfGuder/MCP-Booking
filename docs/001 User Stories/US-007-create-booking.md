@@ -1,4 +1,12 @@
-# User Story: Tool create_booking
+---
+id: "007"
+title: Tool create_booking
+tags:
+  - UserStory
+status: open
+---
+
+# US-007: Tool create_booking
 
 **Issue:** [#7 — US-007 Tool: create_booking](https://github.com/RalfGuder/MCP-Booking/issues/7)
 **Parent:** [#1 — US-001 MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)

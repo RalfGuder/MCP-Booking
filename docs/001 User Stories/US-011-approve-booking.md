@@ -1,4 +1,12 @@
-# User Story: Tool approve_booking
+---
+id: "011"
+title: Tool approve_booking
+tags:
+  - UserStory
+status: open
+---
+
+# US-011: Tool approve_booking
 
 **Issue:** [#11 — US-011 Tool: approve_booking](https://github.com/RalfGuder/MCP-Booking/issues/11)
 **Parent:** [#1 — US-001 MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)

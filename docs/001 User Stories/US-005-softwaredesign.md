@@ -1,4 +1,12 @@
-# User Story: Softwaredesign mit TDD
+---
+id: "005"
+title: Softwaredesign mit TDD
+tags:
+  - UserStory
+status: open
+---
+
+# US-005: Softwaredesign mit TDD
 
 **Issue:** [#5 — Softwaredesign](https://github.com/RalfGuder/MCP-Booking/issues/5)
 

@@ -1,4 +1,12 @@
-# User Story: Tool get_availability_dates
+---
+id: "021"
+title: Tool get_availability_dates
+tags:
+  - UserStory
+status: open
+---
+
+# US-021: Tool get_availability_dates
 
 **Issue:** [#21 — US-021 Tool: get_availability_dates](https://github.com/RalfGuder/MCP-Booking/issues/21)
 **Parent:** [#1 — US-001 MCP-Server](https://github.com/RalfGuder/MCP-Booking/issues/1)

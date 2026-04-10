@@ -1,4 +1,12 @@
-# User Story: Programmiersprache C# mit SDK-Style
+---
+id: "004"
+title: Programmiersprache C# mit SDK-Style
+tags:
+  - UserStory
+status: open
+---
+
+# US-004: Programmiersprache C# mit SDK-Style
 
 **Issue:** [#4 — Programmiersprache](https://github.com/RalfGuder/MCP-Booking/issues/4)
 
