@@ -13,18 +13,18 @@ status: open
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
 3. Die Buchung existiert und hat den Status `approved`.
 
-## Ausloeser
+## Auslöser
 
-Der Nutzer moechte eine genehmigte Buchung zur erneuten Pruefung zuruecksetzen (z.B. "Setze Buchung 42 zurueck auf ausstehend").
+Der Nutzer möchte eine genehmigte Buchung zur erneuten Prüfung zurücksetzen (z.B. "Setze Buchung 42 zurück auf ausstehend").
 
 ## Hauptablauf
 
@@ -33,7 +33,7 @@ Der Nutzer moechte eine genehmigte Buchung zur erneuten Pruefung zuruecksetzen (
 3. Der MCP-Server sendet einen `POST /bookings/{id}/pending`-Request an die API.
 4. Die API setzt den Status der Buchung auf `pending`.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent bestaetigt dem Nutzer die Statusaenderung.
+6. Der KI-Assistent bestätigt dem Nutzer die Statusänderung.
 
 ## Parameter
 
@@ -44,10 +44,10 @@ Der Nutzer moechte eine genehmigte Buchung zur erneuten Pruefung zuruecksetzen (
 ## Ergebnis
 
 Strukturiertes Objekt mit:
-- Bestaetigung der Statusaenderung
+- Bestätigung der Statusänderung
 - Aktualisierter Buchungsstatus (`pending`)
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
 ### E1: Buchung nicht gefunden (404)
 3a. Die API liefert 404 Not Found.

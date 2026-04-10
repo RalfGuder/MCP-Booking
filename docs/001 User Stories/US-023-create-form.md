@@ -18,8 +18,8 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** ein neues Buchungsformular anlegen koennen,
-**damit** ich Formulare fuer verschiedene Buchungstypen erstellen kann.
+**möchte ich** ein neues Buchungsformular anlegen können,
+**damit** ich Formulare für verschiedene Buchungstypen erstellen kann.
 
 ## Parameter
 
@@ -29,15 +29,15 @@ status: open
 | structure_json | string | ja | JSON-String mit Formularstruktur |
 | form_slug | string | nein | URL-freundlicher Slug |
 | settings_json | string | nein | JSON-String mit Formulareinstellungen |
-| status | string | nein | Veroeffentlichungsstatus: `published`, `draft` |
+| status | string | nein | Veröffentlichungsstatus: `published`, `draft` |
 
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `create_form` ist registriert und aufrufbar
 - [ ] Pflichtfelder `title` und `structure_json` werden validiert
-- [ ] Erfolgreiche Erstellung liefert Bestaetigung mit Formular-ID
-- [ ] Validierungsfehler werden verstaendlich weitergegeben
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Erfolgreiche Erstellung liefert Bestätigung mit Formular-ID
+- [ ] Validierungsfehler werden verständlich weitergegeben
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreiche Erstellung
 - [ ] Unit-Test: Fehlende Pflichtfelder
 - [ ] Unit-Test: API-Fehlerbehandlung

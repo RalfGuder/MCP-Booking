@@ -13,18 +13,18 @@ status: open
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
 3. Die Buchung existiert und hat den Status `pending`.
 
-## Ausloeser
+## Auslöser
 
-Der Nutzer moechte eine ausstehende Buchung genehmigen (z.B. "Genehmige die Buchung 42").
+Der Nutzer möchte eine ausstehende Buchung genehmigen (z.B. "Genehmige die Buchung 42").
 
 ## Hauptablauf
 
@@ -33,7 +33,7 @@ Der Nutzer moechte eine ausstehende Buchung genehmigen (z.B. "Genehmige die Buch
 3. Der MCP-Server sendet einen `POST /bookings/{id}/approve`-Request an die API.
 4. Die API setzt den Status der Buchung auf `approved`.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent bestaetigt dem Nutzer die Genehmigung.
+6. Der KI-Assistent bestätigt dem Nutzer die Genehmigung.
 
 ## Parameter
 
@@ -44,10 +44,10 @@ Der Nutzer moechte eine ausstehende Buchung genehmigen (z.B. "Genehmige die Buch
 ## Ergebnis
 
 Strukturiertes Objekt mit:
-- Bestaetigung der Genehmigung
+- Bestätigung der Genehmigung
 - Aktualisierter Buchungsstatus (`approved`)
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
 ### E1: Buchung nicht gefunden (404)
 3a. Die API liefert 404 Not Found.

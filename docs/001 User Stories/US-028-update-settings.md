@@ -18,8 +18,8 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** die Einstellungen des Buchungssystems aktualisieren koennen,
-**damit** ich Kalender-, Buchungs-, UI- und Bestaetigungseinstellungen aendern kann.
+**möchte ich** die Einstellungen des Buchungssystems aktualisieren können,
+**damit** ich Kalender-, Buchungs-, UI- und Bestätigungseinstellungen ändern kann.
 
 ## Parameter
 
@@ -27,14 +27,14 @@ status: open
 |------|-----|---------|--------------|
 | calendar | object | nein | Kalender-Anzeige- und Verhaltenseinstellungen |
 | booking | object | nein | Buchungs-Workflow-Einstellungen |
-| ui | object | nein | Benutzeroberflaechen-Einstellungen |
-| confirmation | object | nein | Bestaetigungs- und Benachrichtigungseinstellungen |
+| ui | object | nein | Benutzeroberflächen-Einstellungen |
+| confirmation | object | nein | Bestätigungs- und Benachrichtigungseinstellungen |
 
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `update_settings` ist registriert und aufrufbar
-- [ ] Partielle Aktualisierung moeglich (nur geaenderte Gruppen senden)
-- [ ] Erfolgreiche Aktualisierung liefert Bestaetigung
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Partielle Aktualisierung möglich (nur geänderte Gruppen senden)
+- [ ] Erfolgreiche Aktualisierung liefert Bestätigung
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreiche Aktualisierung
 - [ ] Unit-Test: API-Fehlerbehandlung

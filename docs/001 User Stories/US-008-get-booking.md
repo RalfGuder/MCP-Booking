@@ -18,7 +18,7 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** die Details einer einzelnen Buchung abrufen koennen,
+**möchte ich** die Details einer einzelnen Buchung abrufen können,
 **damit** ich alle Informationen zu einer bestimmten Buchung einsehen kann.
 
 ## Parameter
@@ -30,9 +30,9 @@ status: open
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `get_booking` ist registriert und aufrufbar
-- [ ] Buchungsdetails werden vollstaendig zurueckgegeben
-- [ ] 404-Fehler bei nicht existierender Buchung wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Buchungsdetails werden vollständig zurückgegeben
+- [ ] 404-Fehler bei nicht existierender Buchung wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreicher Abruf
 - [ ] Unit-Test: Buchung nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

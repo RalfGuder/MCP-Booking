@@ -18,8 +18,8 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** eine Buchung loeschen koennen,
-**damit** ich nicht mehr benoetigte Buchungen entfernen kann.
+**möchte ich** eine Buchung löschen können,
+**damit** ich nicht mehr benötigte Buchungen entfernen kann.
 
 ## Parameter
 
@@ -30,9 +30,9 @@ status: open
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `delete_booking` ist registriert und aufrufbar
-- [ ] Erfolgreiche Loeschung liefert Bestaetigung
-- [ ] 404-Fehler bei nicht existierender Buchung wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
-- [ ] Unit-Test: Erfolgreiche Loeschung
+- [ ] Erfolgreiche Löschung liefert Bestätigung
+- [ ] 404-Fehler bei nicht existierender Buchung wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
+- [ ] Unit-Test: Erfolgreiche Löschung
 - [ ] Unit-Test: Buchung nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

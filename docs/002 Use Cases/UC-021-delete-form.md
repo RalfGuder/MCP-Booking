@@ -1,39 +1,39 @@
 ---
 id: "021"
-title: Formular loeschen
+title: Formular löschen
 tags:
   - UseCase
   - Forms
 status: open
 ---
 
-# UC-021: Formular loeschen
+# UC-021: Formular löschen
 
 **User Story:** [US-026 Tool: delete_form](../001%20User%20Stories/US-026-delete-form.md) | [Issue #26](https://github.com/RalfGuder/MCP-Booking/issues/26)
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
-3. Das zu loeschende Formular existiert im System.
+3. Das zu löschende Formular existiert im System.
 
-## Ausloeser
+## Auslöser
 
-Der Nutzer moechte ein Formular entfernen (z.B. "Loesche das Formular 4").
+Der Nutzer möchte ein Formular entfernen (z.B. "Lösche das Formular 4").
 
 ## Hauptablauf
 
 1. Der KI-Assistent ruft das MCP-Tool `delete_form` mit der Formular-ID auf.
 2. Der MCP-Server validiert den Parameter `id`.
 3. Der MCP-Server sendet einen `DELETE /forms/{id}`-Request an die API.
-4. Die API loescht das Formular und liefert eine Bestaetigung.
+4. Die API löscht das Formular und liefert eine Bestätigung.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent bestaetigt dem Nutzer die Loeschung.
+6. Der KI-Assistent bestätigt dem Nutzer die Löschung.
 
 ## Parameter
 
@@ -44,10 +44,10 @@ Der Nutzer moechte ein Formular entfernen (z.B. "Loesche das Formular 4").
 ## Ergebnis
 
 Strukturiertes Objekt mit:
-- Bestaetigung der Loeschung
-- ID des geloeschten Formulars
+- Bestätigung der Löschung
+- ID des gelöschten Formulars
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
 ### E1: Formular nicht gefunden (404)
 3a. Die API liefert 404 Not Found.

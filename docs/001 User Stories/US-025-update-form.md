@@ -18,8 +18,8 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** ein bestehendes Formular aktualisieren koennen,
-**damit** ich Titel, Struktur, Einstellungen oder Status eines Formulars aendern kann.
+**möchte ich** ein bestehendes Formular aktualisieren können,
+**damit** ich Titel, Struktur, Einstellungen oder Status eines Formulars ändern kann.
 
 ## Parameter
 
@@ -35,10 +35,10 @@ status: open
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `update_form` ist registriert und aufrufbar
-- [ ] Partielle Aktualisierung moeglich (nur geaenderte Felder senden)
-- [ ] Erfolgreiche Aktualisierung liefert Bestaetigung
-- [ ] 404-Fehler bei nicht existierendem Formular wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Partielle Aktualisierung möglich (nur geänderte Felder senden)
+- [ ] Erfolgreiche Aktualisierung liefert Bestätigung
+- [ ] 404-Fehler bei nicht existierendem Formular wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreiche Aktualisierung
 - [ ] Unit-Test: Formular nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

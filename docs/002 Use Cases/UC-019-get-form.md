@@ -13,16 +13,16 @@ status: open
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
 3. Die Formular-ID ist bekannt.
 
-## Ausloeser
+## Auslöser
 
 Der Nutzer fragt nach Details eines Formulars (z.B. "Zeige mir die Struktur des Formulars 2").
 
@@ -31,9 +31,9 @@ Der Nutzer fragt nach Details eines Formulars (z.B. "Zeige mir die Struktur des 
 1. Der KI-Assistent ruft das MCP-Tool `get_form` mit der Formular-ID auf.
 2. Der MCP-Server validiert den Parameter `id`.
 3. Der MCP-Server sendet einen `GET /forms/{id}`-Request an die API.
-4. Die API liefert die vollstaendigen Formulardetails.
+4. Die API liefert die vollständigen Formulardetails.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent praesentiert die Formulardetails dem Nutzer.
+6. Der KI-Assistent präsentiert die Formulardetails dem Nutzer.
 
 ## Parameter
 
@@ -48,7 +48,7 @@ Strukturiertes Objekt mit:
 - Formularstruktur (structure_json)
 - Formulareinstellungen (settings_json)
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
 ### E1: Formular nicht gefunden (404)
 3a. Die API liefert 404 Not Found.
@@ -60,4 +60,4 @@ Strukturiertes Objekt mit:
 
 ## Nachbedingungen
 
-- Keine Zustandsaenderung im System (lesender Zugriff).
+- Keine Zustandsänderung im System (lesender Zugriff).

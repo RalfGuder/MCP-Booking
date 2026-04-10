@@ -18,7 +18,7 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** eine neue Ressource (Buchungstyp) anlegen koennen,
+**möchte ich** eine neue Ressource (Buchungstyp) anlegen können,
 **damit** ich neue buchbare Einheiten im System erstellen kann.
 
 ## Parameter
@@ -33,9 +33,9 @@ status: open
 
 - [ ] MCP-Tool `create_resource` ist registriert und aufrufbar
 - [ ] Pflichtfeld `title` wird validiert
-- [ ] Erfolgreiche Erstellung liefert Bestaetigung mit Ressource-ID
-- [ ] Validierungsfehler werden verstaendlich weitergegeben
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Erfolgreiche Erstellung liefert Bestätigung mit Ressource-ID
+- [ ] Validierungsfehler werden verständlich weitergegeben
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreiche Erstellung
 - [ ] Unit-Test: Fehlender Titel
 - [ ] Unit-Test: API-Fehlerbehandlung

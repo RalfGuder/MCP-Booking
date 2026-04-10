@@ -18,8 +18,8 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** die verfuegbaren Daten einer Ressource abrufen koennen,
-**damit** ich konkrete buchbare Termine fuer einen Zeitraum erhalte.
+**möchte ich** die verfügbaren Daten einer Ressource abrufen können,
+**damit** ich konkrete buchbare Termine für einen Zeitraum erhalte.
 
 ## Parameter
 
@@ -34,9 +34,9 @@ status: open
 
 - [ ] MCP-Tool `get_availability_dates` ist registriert und aufrufbar
 - [ ] Pflichtfelder `resource_id`, `date_from`, `date_to` werden validiert
-- [ ] Liste verfuegbarer Daten wird korrekt zurueckgegeben
+- [ ] Liste verfügbarer Daten wird korrekt zurückgegeben
 - [ ] Leere Datenliste wird korrekt behandelt
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreicher Abruf mit Ergebnissen
-- [ ] Unit-Test: Keine verfuegbaren Daten
+- [ ] Unit-Test: Keine verfügbaren Daten
 - [ ] Unit-Test: API-Fehlerbehandlung

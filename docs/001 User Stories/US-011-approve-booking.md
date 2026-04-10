@@ -18,7 +18,7 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** eine ausstehende Buchung genehmigen koennen,
+**möchte ich** eine ausstehende Buchung genehmigen können,
 **damit** ich den Buchungsstatus von "pending" auf "approved" setzen kann.
 
 ## Parameter
@@ -30,9 +30,9 @@ status: open
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `approve_booking` ist registriert und aufrufbar
-- [ ] Erfolgreiche Genehmigung liefert Bestaetigung
-- [ ] 404-Fehler bei nicht existierender Buchung wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Erfolgreiche Genehmigung liefert Bestätigung
+- [ ] 404-Fehler bei nicht existierender Buchung wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreiche Genehmigung
 - [ ] Unit-Test: Buchung nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

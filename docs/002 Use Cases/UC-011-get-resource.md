@@ -13,16 +13,16 @@ status: open
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
 3. Die Ressource-ID ist bekannt.
 
-## Ausloeser
+## Auslöser
 
 Der Nutzer fragt nach Details einer bestimmten Ressource (z.B. "Zeige mir die Details der Ressource 3").
 
@@ -31,9 +31,9 @@ Der Nutzer fragt nach Details einer bestimmten Ressource (z.B. "Zeige mir die De
 1. Der KI-Assistent ruft das MCP-Tool `get_resource` mit der Ressource-ID auf.
 2. Der MCP-Server validiert den Parameter `id`.
 3. Der MCP-Server sendet einen `GET /resources/{id}`-Request an die API.
-4. Die API liefert die vollstaendigen Ressourcendetails.
+4. Die API liefert die vollständigen Ressourcendetails.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent praesentiert die Ressourcendetails dem Nutzer.
+6. Der KI-Assistent präsentiert die Ressourcendetails dem Nutzer.
 
 ## Parameter
 
@@ -46,7 +46,7 @@ Der Nutzer fragt nach Details einer bestimmten Ressource (z.B. "Zeige mir die De
 Strukturiertes Objekt mit:
 - Ressource-ID, Titel, Kosten, Besucheranzahl
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
 ### E1: Ressource nicht gefunden (404)
 3a. Die API liefert 404 Not Found.
@@ -58,4 +58,4 @@ Strukturiertes Objekt mit:
 
 ## Nachbedingungen
 
-- Keine Zustandsaenderung im System (lesender Zugriff).
+- Keine Zustandsänderung im System (lesender Zugriff).

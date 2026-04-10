@@ -18,7 +18,7 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** die Einstellungen einer bestimmten Gruppe abrufen koennen,
+**möchte ich** die Einstellungen einer bestimmten Gruppe abrufen können,
 **damit** ich gezielt nur die relevanten Einstellungen (z.B. nur Kalender-Einstellungen) einsehen kann.
 
 ## Parameter
@@ -31,9 +31,9 @@ status: open
 
 - [ ] MCP-Tool `get_settings_group` ist registriert und aufrufbar
 - [ ] Pflichtfeld `group` wird validiert (nur Kleinbuchstaben und Unterstriche)
-- [ ] Einstellungen der Gruppe werden zurueckgegeben
-- [ ] 404-Fehler bei nicht existierender Gruppe wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Einstellungen der Gruppe werden zurückgegeben
+- [ ] 404-Fehler bei nicht existierender Gruppe wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreicher Abruf
 - [ ] Unit-Test: Gruppe nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

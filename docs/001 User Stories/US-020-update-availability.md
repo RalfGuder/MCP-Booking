@@ -18,8 +18,8 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** die Verfuegbarkeit einer Ressource aktualisieren koennen,
-**damit** ich Zeitraeume als verfuegbar oder nicht verfuegbar markieren kann.
+**möchte ich** die Verfügbarkeit einer Ressource aktualisieren können,
+**damit** ich Zeiträume als verfügbar oder nicht verfügbar markieren kann.
 
 ## Parameter
 
@@ -31,9 +31,9 @@ status: open
 
 - [ ] MCP-Tool `update_availability` ist registriert und aufrufbar
 - [ ] Pflichtfeld `resource_id` wird validiert
-- [ ] Erfolgreiche Aktualisierung liefert Bestaetigung
-- [ ] 404-Fehler bei nicht existierender Ressource wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Erfolgreiche Aktualisierung liefert Bestätigung
+- [ ] 404-Fehler bei nicht existierender Ressource wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreiche Aktualisierung
 - [ ] Unit-Test: Ressource nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

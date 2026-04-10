@@ -18,22 +18,22 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** alle verfuegbaren Buchungsformulare auflisten koennen,
-**damit** ich einen Ueberblick ueber die vorhandenen Formulare erhalte.
+**möchte ich** alle verfügbaren Buchungsformulare auflisten können,
+**damit** ich einen Überblick über die vorhandenen Formulare erhalte.
 
 ## Parameter
 
 | Name | Typ | Pflicht | Beschreibung |
 |------|-----|---------|--------------|
 | page | integer | nein | Aktuelle Seite (Standard: 1) |
-| per_page | integer | nein | Eintraege pro Seite (Standard: 20, Max: 100) |
+| per_page | integer | nein | Einträge pro Seite (Standard: 20, Max: 100) |
 
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `list_forms` ist registriert und aufrufbar
 - [ ] Paginierung funktioniert (page, per_page)
 - [ ] Leere Ergebnisliste wird korrekt behandelt
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Happy Path mit Ergebnissen
 - [ ] Unit-Test: Leere Ergebnisliste
 - [ ] Unit-Test: API-Fehlerbehandlung

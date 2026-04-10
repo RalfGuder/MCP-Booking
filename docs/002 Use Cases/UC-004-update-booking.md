@@ -13,27 +13,27 @@ status: open
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
 3. Die zu aktualisierende Buchung existiert im System.
 
-## Ausloeser
+## Auslöser
 
-Der Nutzer moechte eine bestehende Buchung aendern (z.B. "Aendere die E-Mail-Adresse in der Buchung 42").
+Der Nutzer möchte eine bestehende Buchung ändern (z.B. "Aendere die E-Mail-Adresse in der Buchung 42").
 
 ## Hauptablauf
 
-1. Der KI-Assistent ruft das MCP-Tool `update_booking` mit ID und den zu aendernden Feldern auf.
+1. Der KI-Assistent ruft das MCP-Tool `update_booking` mit ID und den zu ändernden Feldern auf.
 2. Der MCP-Server validiert die Parameter.
 3. Der MCP-Server sendet einen `PUT /bookings/{id}`-Request an die API mit dem JSON-Body.
-4. Die API aktualisiert die Buchung und liefert eine Bestaetigung.
+4. Die API aktualisiert die Buchung und liefert eine Bestätigung.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent bestaetigt dem Nutzer die erfolgreiche Aktualisierung.
+6. Der KI-Assistent bestätigt dem Nutzer die erfolgreiche Aktualisierung.
 
 ## Parameter
 
@@ -47,23 +47,23 @@ Der Nutzer moechte eine bestehende Buchung aendern (z.B. "Aendere die E-Mail-Adr
 ## Ergebnis
 
 Strukturiertes Objekt mit:
-- Bestaetigung der Aktualisierung
+- Bestätigung der Aktualisierung
 - Aktualisierte Buchungsdetails
 
-## Alternative Ablaeufe
+## Alternative Abläufe
 
-### A1: Nur Status aendern
-1a. Nur das Feld `status` wird uebergeben.
-3a. Der Request enthaelt nur das Status-Feld im Body.
+### A1: Nur Status ändern
+1a. Nur das Feld `status` wird übergeben.
+3a. Der Request enthält nur das Status-Feld im Body.
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
 ### E1: Buchung nicht gefunden (404)
 3a. Die API liefert 404 Not Found.
 4a. Der MCP-Server liefert eine Fehlermeldung: "Buchung mit ID [id] nicht gefunden."
 
 ### E2: Keine Felder zum Aktualisieren
-2a. Ausser `id` wurden keine Felder uebergeben.
+2a. Ausser `id` wurden keine Felder übergeben.
 3a. Der MCP-Server liefert eine Fehlermeldung: "Mindestens ein Feld muss aktualisiert werden."
 
 ### E3: Authentifizierungsfehler (401/403)

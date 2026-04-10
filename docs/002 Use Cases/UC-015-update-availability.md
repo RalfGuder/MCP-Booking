@@ -1,39 +1,39 @@
 ---
 id: "015"
-title: Verfuegbarkeit aktualisieren
+title: Verfügbarkeit aktualisieren
 tags:
   - UseCase
   - Availability
 status: open
 ---
 
-# UC-015: Verfuegbarkeit aktualisieren
+# UC-015: Verfügbarkeit aktualisieren
 
 **User Story:** [US-020 Tool: update_availability](../001%20User%20Stories/US-020-update-availability.md) | [Issue #20](https://github.com/RalfGuder/MCP-Booking/issues/20)
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
 3. Die Ressource existiert im System.
 
-## Ausloeser
+## Auslöser
 
-Der Nutzer moechte die Verfuegbarkeit einer Ressource aendern (z.B. "Sperre den Gemeindesaal am 20. Juni").
+Der Nutzer möchte die Verfügbarkeit einer Ressource ändern (z.B. "Sperre den Gemeindesaal am 20. Juni").
 
 ## Hauptablauf
 
-1. Der KI-Assistent ruft das MCP-Tool `update_availability` mit der Ressource-ID und den Aenderungsdaten auf.
+1. Der KI-Assistent ruft das MCP-Tool `update_availability` mit der Ressource-ID und den Änderungsdaten auf.
 2. Der MCP-Server validiert den Pflichtparameter `resource_id`.
 3. Der MCP-Server sendet einen `PUT /availability/{resource_id}`-Request an die API.
-4. Die API aktualisiert die Verfuegbarkeit und liefert eine Bestaetigung.
+4. Die API aktualisiert die Verfügbarkeit und liefert eine Bestätigung.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent bestaetigt dem Nutzer die Aenderung.
+6. Der KI-Assistent bestätigt dem Nutzer die Änderung.
 
 ## Parameter
 
@@ -44,9 +44,9 @@ Der Nutzer moechte die Verfuegbarkeit einer Ressource aendern (z.B. "Sperre den 
 ## Ergebnis
 
 Strukturiertes Objekt mit:
-- Bestaetigung der Aktualisierung
+- Bestätigung der Aktualisierung
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
 ### E1: Ressource nicht gefunden (404)
 3a. Die API liefert 404 Not Found.
@@ -58,4 +58,4 @@ Strukturiertes Objekt mit:
 
 ## Nachbedingungen
 
-- Die Verfuegbarkeit der Ressource ist gemaess den Aenderungen aktualisiert.
+- Die Verfügbarkeit der Ressource ist gemäß den Änderungen aktualisiert.

@@ -18,8 +18,8 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** eine bestehende Buchung aktualisieren koennen,
-**damit** ich Buchungsdaten wie Formulardaten, Typ oder Status aendern kann.
+**möchte ich** eine bestehende Buchung aktualisieren können,
+**damit** ich Buchungsdaten wie Formulardaten, Typ oder Status ändern kann.
 
 ## Parameter
 
@@ -33,10 +33,10 @@ status: open
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `update_booking` ist registriert und aufrufbar
-- [ ] Partielle Aktualisierung moeglich (nur geaenderte Felder senden)
-- [ ] Erfolgreiche Aktualisierung liefert Bestaetigung
-- [ ] 404-Fehler bei nicht existierender Buchung wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Partielle Aktualisierung möglich (nur geänderte Felder senden)
+- [ ] Erfolgreiche Aktualisierung liefert Bestätigung
+- [ ] 404-Fehler bei nicht existierender Buchung wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreiche Aktualisierung
 - [ ] Unit-Test: Buchung nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

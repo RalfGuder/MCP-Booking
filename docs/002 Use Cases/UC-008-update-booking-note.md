@@ -1,39 +1,39 @@
 ---
 id: "008"
-title: Notiz an Buchung anfuegen
+title: Notiz an Buchung anfügen
 tags:
   - UseCase
   - Bookings
 status: open
 ---
 
-# UC-008: Notiz an Buchung anfuegen
+# UC-008: Notiz an Buchung anfügen
 
 **User Story:** [US-013 Tool: update_booking_note](../001%20User%20Stories/US-013-update-booking-note.md) | [Issue #13](https://github.com/RalfGuder/MCP-Booking/issues/13)
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
 3. Die Buchung existiert im System.
 
-## Ausloeser
+## Auslöser
 
-Der Nutzer moechte einer Buchung eine Notiz hinzufuegen (z.B. "Fuege zur Buchung 42 die Notiz 'Rollstuhlgerecht benoetigt' hinzu").
+Der Nutzer möchte einer Buchung eine Notiz hinzufügen (z.B. "Füge zur Buchung 42 die Notiz 'Rollstuhlgerecht benötigt' hinzu").
 
 ## Hauptablauf
 
 1. Der KI-Assistent ruft das MCP-Tool `update_booking_note` mit ID und Notiztext auf.
 2. Der MCP-Server validiert die Parameter `id` und `note`.
 3. Der MCP-Server sendet einen `PUT /bookings/{id}/note`-Request an die API mit dem JSON-Body.
-4. Die API speichert die Notiz und liefert eine Bestaetigung.
+4. Die API speichert die Notiz und liefert eine Bestätigung.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent bestaetigt dem Nutzer das Anfuegen der Notiz.
+6. Der KI-Assistent bestätigt dem Nutzer das Anfügen der Notiz.
 
 ## Parameter
 
@@ -45,10 +45,10 @@ Der Nutzer moechte einer Buchung eine Notiz hinzufuegen (z.B. "Fuege zur Buchung
 ## Ergebnis
 
 Strukturiertes Objekt mit:
-- Bestaetigung der Notizerstellung
+- Bestätigung der Notizerstellung
 - Buchungs-ID
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
 ### E1: Buchung nicht gefunden (404)
 3a. Die API liefert 404 Not Found.

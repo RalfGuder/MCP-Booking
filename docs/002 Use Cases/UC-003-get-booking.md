@@ -13,16 +13,16 @@ status: open
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
 3. Die Buchungs-ID ist bekannt.
 
-## Ausloeser
+## Auslöser
 
 Der Nutzer fragt nach den Details einer bestimmten Buchung (z.B. "Zeige mir die Details der Buchung 42").
 
@@ -31,9 +31,9 @@ Der Nutzer fragt nach den Details einer bestimmten Buchung (z.B. "Zeige mir die 
 1. Der KI-Assistent ruft das MCP-Tool `get_booking` mit der Buchungs-ID auf.
 2. Der MCP-Server validiert den Parameter `id`.
 3. Der MCP-Server sendet einen `GET /bookings/{id}`-Request an die API.
-4. Die API liefert die vollstaendigen Buchungsdetails.
+4. Die API liefert die vollständigen Buchungsdetails.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent praesentiert die Buchungsdetails dem Nutzer.
+6. Der KI-Assistent präsentiert die Buchungsdetails dem Nutzer.
 
 ## Parameter
 
@@ -50,7 +50,7 @@ Strukturiertes Objekt mit allen Buchungsdetails:
 - Gebuchte Daten
 - Notizen
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
 ### E1: Buchung nicht gefunden (404)
 3a. Die API liefert 404 Not Found.
@@ -60,10 +60,10 @@ Strukturiertes Objekt mit allen Buchungsdetails:
 3a. Die API liefert 401 oder 403.
 4a. Der MCP-Server liefert eine entsprechende Fehlermeldung.
 
-### E3: Ungueltiger Parameter
-2a. Die ID ist keine gueltige Zahl.
-3a. Der MCP-Server liefert eine Fehlermeldung: "Ungueltige Buchungs-ID."
+### E3: Ungültiger Parameter
+2a. Die ID ist keine gültige Zahl.
+3a. Der MCP-Server liefert eine Fehlermeldung: "Ungültige Buchungs-ID."
 
 ## Nachbedingungen
 
-- Keine Zustandsaenderung im System (lesender Zugriff).
+- Keine Zustandsänderung im System (lesender Zugriff).

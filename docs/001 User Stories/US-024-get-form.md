@@ -18,7 +18,7 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** die Details eines einzelnen Formulars abrufen koennen,
+**möchte ich** die Details eines einzelnen Formulars abrufen können,
 **damit** ich Struktur und Einstellungen eines bestimmten Formulars einsehen kann.
 
 ## Parameter
@@ -30,9 +30,9 @@ status: open
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `get_form` ist registriert und aufrufbar
-- [ ] Formulardetails werden vollstaendig zurueckgegeben (inkl. structure_json, settings_json)
-- [ ] 404-Fehler bei nicht existierendem Formular wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Formulardetails werden vollständig zurückgegeben (inkl. structure_json, settings_json)
+- [ ] 404-Fehler bei nicht existierendem Formular wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreicher Abruf
 - [ ] Unit-Test: Formular nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

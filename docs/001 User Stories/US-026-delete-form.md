@@ -18,8 +18,8 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** ein Formular loeschen koennen,
-**damit** ich nicht mehr benoetigte Buchungsformulare entfernen kann.
+**möchte ich** ein Formular löschen können,
+**damit** ich nicht mehr benötigte Buchungsformulare entfernen kann.
 
 ## Parameter
 
@@ -30,9 +30,9 @@ status: open
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `delete_form` ist registriert und aufrufbar
-- [ ] Erfolgreiche Loeschung liefert Bestaetigung
-- [ ] 404-Fehler bei nicht existierendem Formular wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
-- [ ] Unit-Test: Erfolgreiche Loeschung
+- [ ] Erfolgreiche Löschung liefert Bestätigung
+- [ ] 404-Fehler bei nicht existierendem Formular wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
+- [ ] Unit-Test: Erfolgreiche Löschung
 - [ ] Unit-Test: Formular nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

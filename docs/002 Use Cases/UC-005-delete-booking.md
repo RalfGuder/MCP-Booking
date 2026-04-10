@@ -1,39 +1,39 @@
 ---
 id: "005"
-title: Buchung loeschen
+title: Buchung löschen
 tags:
   - UseCase
   - Bookings
 status: open
 ---
 
-# UC-005: Buchung loeschen
+# UC-005: Buchung löschen
 
 **User Story:** [US-010 Tool: delete_booking](../001%20User%20Stories/US-010-delete-booking.md) | [Issue #10](https://github.com/RalfGuder/MCP-Booking/issues/10)
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
-3. Die zu loeschende Buchung existiert im System.
+3. Die zu löschende Buchung existiert im System.
 
-## Ausloeser
+## Auslöser
 
-Der Nutzer moechte eine Buchung entfernen (z.B. "Loesche die Buchung 42").
+Der Nutzer möchte eine Buchung entfernen (z.B. "Lösche die Buchung 42").
 
 ## Hauptablauf
 
 1. Der KI-Assistent ruft das MCP-Tool `delete_booking` mit der Buchungs-ID auf.
 2. Der MCP-Server validiert den Parameter `id`.
 3. Der MCP-Server sendet einen `DELETE /bookings/{id}`-Request an die API.
-4. Die API loescht die Buchung und liefert eine Bestaetigung.
+4. Die API löscht die Buchung und liefert eine Bestätigung.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent bestaetigt dem Nutzer die erfolgreiche Loeschung.
+6. Der KI-Assistent bestätigt dem Nutzer die erfolgreiche Löschung.
 
 ## Parameter
 
@@ -44,10 +44,10 @@ Der Nutzer moechte eine Buchung entfernen (z.B. "Loesche die Buchung 42").
 ## Ergebnis
 
 Strukturiertes Objekt mit:
-- Bestaetigung der Loeschung
-- ID der geloeschten Buchung
+- Bestätigung der Löschung
+- ID der gelöschten Buchung
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
 ### E1: Buchung nicht gefunden (404)
 3a. Die API liefert 404 Not Found.
@@ -60,4 +60,4 @@ Strukturiertes Objekt mit:
 ## Nachbedingungen
 
 - Die Buchung existiert nicht mehr im System.
-- Die Verfuegbarkeit der zugehoerigen Ressource fuer die freigegebenen Daten ist wiederhergestellt.
+- Die Verfügbarkeit der zugehörigen Ressource für die freigegebenen Daten ist wiederhergestellt.

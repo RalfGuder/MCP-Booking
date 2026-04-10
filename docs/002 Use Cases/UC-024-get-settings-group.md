@@ -13,15 +13,15 @@ status: open
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
 
-## Ausloeser
+## Auslöser
 
 Der Nutzer fragt nach Einstellungen einer bestimmten Gruppe (z.B. "Zeige mir nur die Kalender-Einstellungen").
 
@@ -32,7 +32,7 @@ Der Nutzer fragt nach Einstellungen einer bestimmten Gruppe (z.B. "Zeige mir nur
 3. Der MCP-Server sendet einen `GET /settings/{group}`-Request an die API.
 4. Die API liefert die Einstellungen der angegebenen Gruppe.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent praesentiert die Gruppeneinstellungen dem Nutzer.
+6. Der KI-Assistent präsentiert die Gruppeneinstellungen dem Nutzer.
 
 ## Parameter
 
@@ -45,15 +45,15 @@ Der Nutzer fragt nach Einstellungen einer bestimmten Gruppe (z.B. "Zeige mir nur
 Strukturiertes Objekt mit:
 - Einstellungen der angegebenen Gruppe
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
 ### E1: Gruppe nicht gefunden (404)
 3a. Die API liefert 404 Not Found.
 4a. Der MCP-Server liefert eine Fehlermeldung: "Einstellungsgruppe '[group]' nicht gefunden."
 
-### E2: Ungueltiger Gruppenname
-2a. Der Gruppenname enthaelt ungueltige Zeichen.
-3a. Der MCP-Server liefert eine Fehlermeldung: "Ungueltiger Gruppenname. Erlaubt sind nur Kleinbuchstaben und Unterstriche."
+### E2: Ungültiger Gruppenname
+2a. Der Gruppenname enthält ungültige Zeichen.
+3a. Der MCP-Server liefert eine Fehlermeldung: "Ungültiger Gruppenname. Erlaubt sind nur Kleinbuchstaben und Unterstriche."
 
 ### E3: Authentifizierungsfehler (401/403)
 3a. Die API liefert 401 oder 403.
@@ -61,4 +61,4 @@ Strukturiertes Objekt mit:
 
 ## Nachbedingungen
 
-- Keine Zustandsaenderung im System (lesender Zugriff).
+- Keine Zustandsänderung im System (lesender Zugriff).

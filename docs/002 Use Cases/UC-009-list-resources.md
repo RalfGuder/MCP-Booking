@@ -13,17 +13,17 @@ status: open
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
 
-## Ausloeser
+## Auslöser
 
-Der Nutzer fragt nach den verfuegbaren Ressourcen (z.B. "Welche Raeume kann ich buchen?").
+Der Nutzer fragt nach den verfügbaren Ressourcen (z.B. "Welche Räume kann ich buchen?").
 
 ## Hauptablauf
 
@@ -32,7 +32,7 @@ Der Nutzer fragt nach den verfuegbaren Ressourcen (z.B. "Welche Raeume kann ich 
 3. Der MCP-Server sendet einen `GET /resources`-Request an die API.
 4. Die API liefert eine paginierte Liste von Ressourcen.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent praesentiert die Ressourcenliste dem Nutzer.
+6. Der KI-Assistent präsentiert die Ressourcenliste dem Nutzer.
 
 ## Parameter
 
@@ -47,22 +47,22 @@ Strukturiertes Objekt mit:
 - Liste der Ressourcen (ID, Titel, Kosten, Besucheranzahl)
 - Paginierungsinformationen
 
-## Alternative Ablaeufe
+## Alternative Abläufe
 
 ### A1: Keine Ressourcen vorhanden
 4a. Die API liefert eine leere Liste.
 5a. Der MCP-Server liefert ein leeres Ergebnis mit Hinweis "Keine Ressourcen vorhanden".
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
 ### E1: Authentifizierungsfehler (401/403)
 3a. Die API liefert 401 oder 403.
 4a. Der MCP-Server liefert eine entsprechende Fehlermeldung.
 
 ### E2: API nicht erreichbar
-3a. Der HTTP-Request schlaegt fehl.
+3a. Der HTTP-Request schlägt fehl.
 4a. Der MCP-Server liefert eine Fehlermeldung: "Die Booking API ist nicht erreichbar."
 
 ## Nachbedingungen
 
-- Keine Zustandsaenderung im System (lesender Zugriff).
+- Keine Zustandsänderung im System (lesender Zugriff).

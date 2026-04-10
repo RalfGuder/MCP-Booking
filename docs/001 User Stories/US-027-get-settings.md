@@ -18,8 +18,8 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** alle Einstellungen des Buchungssystems abrufen koennen,
-**damit** ich die aktuelle Konfiguration (Kalender, Buchung, UI, Bestaetigung) einsehen kann.
+**möchte ich** alle Einstellungen des Buchungssystems abrufen können,
+**damit** ich die aktuelle Konfiguration (Kalender, Buchung, UI, Bestätigung) einsehen kann.
 
 ## Parameter
 
@@ -28,7 +28,7 @@ Keine Parameter erforderlich.
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `list_settings` ist registriert und aufrufbar
-- [ ] Alle Einstellungsgruppen werden zurueckgegeben
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Alle Einstellungsgruppen werden zurückgegeben
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreicher Abruf
 - [ ] Unit-Test: API-Fehlerbehandlung

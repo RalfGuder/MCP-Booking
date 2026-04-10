@@ -18,8 +18,8 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** eine genehmigte Buchung zurueck auf "ausstehend" setzen koennen,
-**damit** ich eine bereits genehmigte Buchung erneut pruefen kann.
+**möchte ich** eine genehmigte Buchung zurück auf "ausstehend" setzen können,
+**damit** ich eine bereits genehmigte Buchung erneut prüfen kann.
 
 ## Parameter
 
@@ -30,9 +30,9 @@ status: open
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `set_booking_pending` ist registriert und aufrufbar
-- [ ] Erfolgreiche Statusaenderung liefert Bestaetigung
-- [ ] 404-Fehler bei nicht existierender Buchung wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
-- [ ] Unit-Test: Erfolgreiche Statusaenderung
+- [ ] Erfolgreiche Statusänderung liefert Bestätigung
+- [ ] 404-Fehler bei nicht existierender Buchung wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
+- [ ] Unit-Test: Erfolgreiche Statusänderung
 - [ ] Unit-Test: Buchung nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

@@ -18,8 +18,8 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** eine Ressource loeschen koennen,
-**damit** ich nicht mehr benoetigte Buchungstypen entfernen kann.
+**möchte ich** eine Ressource löschen können,
+**damit** ich nicht mehr benötigte Buchungstypen entfernen kann.
 
 ## Parameter
 
@@ -30,9 +30,9 @@ status: open
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `delete_resource` ist registriert und aufrufbar
-- [ ] Erfolgreiche Loeschung liefert Bestaetigung
-- [ ] 404-Fehler bei nicht existierender Ressource wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
-- [ ] Unit-Test: Erfolgreiche Loeschung
+- [ ] Erfolgreiche Löschung liefert Bestätigung
+- [ ] 404-Fehler bei nicht existierender Ressource wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
+- [ ] Unit-Test: Erfolgreiche Löschung
 - [ ] Unit-Test: Ressource nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

@@ -18,7 +18,7 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** die Verfuegbarkeit einer Ressource fuer einen Zeitraum abfragen koennen,
+**möchte ich** die Verfügbarkeit einer Ressource für einen Zeitraum abfragen können,
 **damit** ich sehen kann, wann eine Ressource buchbar ist.
 
 ## Parameter
@@ -34,9 +34,9 @@ status: open
 
 - [ ] MCP-Tool `get_availability` ist registriert und aufrufbar
 - [ ] Pflichtfelder `resource_id`, `date_from`, `date_to` werden validiert
-- [ ] Verfuegbarkeitsdaten werden korrekt zurueckgegeben
-- [ ] 404-Fehler bei nicht existierender Ressource wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Verfügbarkeitsdaten werden korrekt zurückgegeben
+- [ ] 404-Fehler bei nicht existierender Ressource wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreicher Abruf
 - [ ] Unit-Test: Ressource nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

@@ -13,26 +13,26 @@ status: open
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
 
-## Ausloeser
+## Auslöser
 
-Der Nutzer moechte eine neue buchbare Ressource anlegen (z.B. "Erstelle eine Ressource 'Vereinsraum' mit Kosten 50 EUR fuer 30 Besucher").
+Der Nutzer möchte eine neue buchbare Ressource anlegen (z.B. "Erstelle eine Ressource 'Vereinsraum' mit Kosten 50 EUR für 30 Besucher").
 
 ## Hauptablauf
 
 1. Der KI-Assistent ruft das MCP-Tool `create_resource` mit den Ressourcendaten auf.
 2. Der MCP-Server validiert das Pflichtfeld `title`.
 3. Der MCP-Server sendet einen `POST /resources`-Request an die API.
-4. Die API erstellt die Ressource und liefert eine Bestaetigung mit der neuen Ressource-ID.
+4. Die API erstellt die Ressource und liefert eine Bestätigung mit der neuen Ressource-ID.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent bestaetigt dem Nutzer die Erstellung.
+6. Der KI-Assistent bestätigt dem Nutzer die Erstellung.
 
 ## Parameter
 
@@ -46,9 +46,9 @@ Der Nutzer moechte eine neue buchbare Ressource anlegen (z.B. "Erstelle eine Res
 
 Strukturiertes Objekt mit:
 - Ressource-ID der neu erstellten Ressource
-- Bestaetigung mit Titel und weiteren Eigenschaften
+- Bestätigung mit Titel und weiteren Eigenschaften
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
 ### E1: Fehlender Titel
 2a. Das Pflichtfeld `title` fehlt oder ist leer.

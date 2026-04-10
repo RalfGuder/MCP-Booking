@@ -1,39 +1,39 @@
 ---
 id: "014"
-title: Verfuegbarkeit abrufen
+title: Verfügbarkeit abrufen
 tags:
   - UseCase
   - Availability
 status: open
 ---
 
-# UC-014: Verfuegbarkeit abrufen
+# UC-014: Verfügbarkeit abrufen
 
 **User Story:** [US-019 Tool: get_availability](../001%20User%20Stories/US-019-get-availability.md) | [Issue #19](https://github.com/RalfGuder/MCP-Booking/issues/19)
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
 3. Die Ressource existiert im System.
 
-## Ausloeser
+## Auslöser
 
-Der Nutzer fragt nach der Verfuegbarkeit einer Ressource (z.B. "Ist der Gemeindesaal im Juni verfuegbar?").
+Der Nutzer fragt nach der Verfügbarkeit einer Ressource (z.B. "Ist der Gemeindesaal im Juni verfügbar?").
 
 ## Hauptablauf
 
 1. Der KI-Assistent ruft das MCP-Tool `get_availability` mit Ressource-ID und Datumsbereich auf.
 2. Der MCP-Server validiert die Pflichtfelder `resource_id`, `date_from`, `date_to`.
 3. Der MCP-Server sendet einen `GET /availability/{resource_id}`-Request mit den Query-Parametern an die API.
-4. Die API liefert die Verfuegbarkeitsdaten fuer den Zeitraum.
+4. Die API liefert die Verfügbarkeitsdaten für den Zeitraum.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent praesentiert die Verfuegbarkeit dem Nutzer.
+6. Der KI-Assistent präsentiert die Verfügbarkeit dem Nutzer.
 
 ## Parameter
 
@@ -47,16 +47,16 @@ Der Nutzer fragt nach der Verfuegbarkeit einer Ressource (z.B. "Ist der Gemeinde
 ## Ergebnis
 
 Strukturiertes Objekt mit:
-- Verfuegbarkeitsdaten pro Tag im angegebenen Zeitraum
-- Status je Datum (verfuegbar/belegt/teilweise belegt)
+- Verfügbarkeitsdaten pro Tag im angegebenen Zeitraum
+- Status je Datum (verfügbar/belegt/teilweise belegt)
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
 ### E1: Ressource nicht gefunden (404)
 3a. Die API liefert 404 Not Found.
 4a. Der MCP-Server liefert eine Fehlermeldung: "Ressource mit ID [id] nicht gefunden."
 
-### E2: Ungueltiger Datumsbereich
+### E2: Ungültiger Datumsbereich
 2a. `date_to` liegt vor `date_from`.
 3a. Der MCP-Server liefert eine Fehlermeldung: "Enddatum muss nach dem Startdatum liegen."
 
@@ -66,4 +66,4 @@ Strukturiertes Objekt mit:
 
 ## Nachbedingungen
 
-- Keine Zustandsaenderung im System (lesender Zugriff).
+- Keine Zustandsänderung im System (lesender Zugriff).

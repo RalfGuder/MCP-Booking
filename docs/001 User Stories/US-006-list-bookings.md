@@ -18,15 +18,15 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** Buchungen auflisten und nach verschiedenen Kriterien filtern koennen,
-**damit** ich einen Ueberblick ueber vorhandene Buchungen erhalte.
+**möchte ich** Buchungen auflisten und nach verschiedenen Kriterien filtern können,
+**damit** ich einen Überblick über vorhandene Buchungen erhalte.
 
 ## Parameter
 
 | Name | Typ | Pflicht | Beschreibung |
 |------|-----|---------|--------------|
 | page | integer | nein | Aktuelle Seite (Standard: 1) |
-| per_page | integer | nein | Eintraege pro Seite (Standard: 20, Max: 100) |
+| per_page | integer | nein | Einträge pro Seite (Standard: 20, Max: 100) |
 | resource_id | integer | nein | Filter nach Ressource/Buchungstyp |
 | status | string | nein | Filter nach Status: `pending`, `approved`, `trash` |
 | date_from | date | nein | Buchungen ab diesem Datum (ISO 8601) |
@@ -42,7 +42,7 @@ status: open
 - [ ] Alle Filter-Parameter werden korrekt an die API weitergegeben
 - [ ] Paginierung funktioniert (page, per_page)
 - [ ] Leere Ergebnisliste wird korrekt behandelt
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Happy Path mit Ergebnissen
 - [ ] Unit-Test: Leere Ergebnisliste
 - [ ] Unit-Test: Filterung nach Status

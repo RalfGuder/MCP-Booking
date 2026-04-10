@@ -18,8 +18,8 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** eine bestehende Ressource aktualisieren koennen,
-**damit** ich Eigenschaften wie Name, Kosten oder Besucheranzahl aendern kann.
+**möchte ich** eine bestehende Ressource aktualisieren können,
+**damit** ich Eigenschaften wie Name, Kosten oder Besucheranzahl ändern kann.
 
 ## Parameter
 
@@ -33,10 +33,10 @@ status: open
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `update_resource` ist registriert und aufrufbar
-- [ ] Partielle Aktualisierung moeglich (nur geaenderte Felder senden)
-- [ ] Erfolgreiche Aktualisierung liefert Bestaetigung
-- [ ] 404-Fehler bei nicht existierender Ressource wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Partielle Aktualisierung möglich (nur geänderte Felder senden)
+- [ ] Erfolgreiche Aktualisierung liefert Bestätigung
+- [ ] 404-Fehler bei nicht existierender Ressource wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreiche Aktualisierung
 - [ ] Unit-Test: Ressource nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

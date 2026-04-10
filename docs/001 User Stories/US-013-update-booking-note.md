@@ -18,8 +18,8 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** einer Buchung eine Notiz hinzufuegen koennen,
-**damit** ich zusaetzliche Informationen zu einer Buchung dokumentieren kann.
+**möchte ich** einer Buchung eine Notiz hinzufügen können,
+**damit** ich zusätzliche Informationen zu einer Buchung dokumentieren kann.
 
 ## Parameter
 
@@ -32,9 +32,9 @@ status: open
 
 - [ ] MCP-Tool `update_booking_note` ist registriert und aufrufbar
 - [ ] Pflichtfeld `note` wird validiert
-- [ ] Erfolgreiche Aktualisierung liefert Bestaetigung
-- [ ] 404-Fehler bei nicht existierender Buchung wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Erfolgreiche Aktualisierung liefert Bestätigung
+- [ ] 404-Fehler bei nicht existierender Buchung wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreiche Notizerstellung
 - [ ] Unit-Test: Buchung nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

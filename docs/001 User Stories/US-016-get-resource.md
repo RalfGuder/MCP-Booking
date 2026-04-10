@@ -18,7 +18,7 @@ status: open
 ## Story
 
 **Als** Nutzer eines KI-Assistenten,
-**moechte ich** die Details einer einzelnen Ressource abrufen koennen,
+**möchte ich** die Details einer einzelnen Ressource abrufen können,
 **damit** ich alle Informationen zu einem bestimmten Buchungstyp einsehen kann.
 
 ## Parameter
@@ -30,9 +30,9 @@ status: open
 ## Akzeptanzkriterien
 
 - [ ] MCP-Tool `get_resource` ist registriert und aufrufbar
-- [ ] Ressourcendetails werden vollstaendig zurueckgegeben
-- [ ] 404-Fehler bei nicht existierender Ressource wird verstaendlich gemeldet
-- [ ] API-Fehler werden als verstaendliche Fehlermeldung zurueckgegeben
+- [ ] Ressourcendetails werden vollständig zurückgegeben
+- [ ] 404-Fehler bei nicht existierender Ressource wird verständlich gemeldet
+- [ ] API-Fehler werden als verständliche Fehlermeldung zurückgegeben
 - [ ] Unit-Test: Erfolgreicher Abruf
 - [ ] Unit-Test: Ressource nicht gefunden (404)
 - [ ] Unit-Test: API-Fehlerbehandlung

@@ -13,26 +13,26 @@ status: open
 
 ## Akteure
 
-- **Primaer:** KI-Assistent (z.B. Claude)
-- **Sekundaer:** WP Booking Calendar REST API
+- **Primär:** KI-Assistent (z.B. Claude)
+- **Sekundär:** WP Booking Calendar REST API
 
 ## Vorbedingungen
 
-1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+1. Der MCP-Server ist gestartet und über stdio erreichbar.
 2. Die API-Zugangsdaten sind korrekt konfiguriert.
 
-## Ausloeser
+## Auslöser
 
-Der Nutzer moechte Einstellungen aendern (z.B. "Setze die Standard-Buchungsdauer auf 2 Stunden").
+Der Nutzer möchte Einstellungen ändern (z.B. "Setze die Standard-Buchungsdauer auf 2 Stunden").
 
 ## Hauptablauf
 
-1. Der KI-Assistent ruft das MCP-Tool `update_settings` mit den zu aendernden Einstellungsgruppen auf.
+1. Der KI-Assistent ruft das MCP-Tool `update_settings` mit den zu ändernden Einstellungsgruppen auf.
 2. Der MCP-Server validiert die Parameter.
 3. Der MCP-Server sendet einen `PUT /settings`-Request an die API mit dem JSON-Body.
-4. Die API aktualisiert die Einstellungen und liefert eine Bestaetigung.
+4. Die API aktualisiert die Einstellungen und liefert eine Bestätigung.
 5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
-6. Der KI-Assistent bestaetigt dem Nutzer die Aenderung.
+6. Der KI-Assistent bestätigt dem Nutzer die Änderung.
 
 ## Parameter
 
@@ -40,25 +40,25 @@ Der Nutzer moechte Einstellungen aendern (z.B. "Setze die Standard-Buchungsdauer
 |------|-----|---------|-------------|
 | calendar | object | nein | Kalender-Einstellungen |
 | booking | object | nein | Buchungs-Workflow-Einstellungen |
-| ui | object | nein | Benutzeroberflaechen-Einstellungen |
-| confirmation | object | nein | Bestaetigungs-/Benachrichtigungseinstellungen |
+| ui | object | nein | Benutzeroberflächen-Einstellungen |
+| confirmation | object | nein | Bestätigungs-/Benachrichtigungseinstellungen |
 
 ## Ergebnis
 
 Strukturiertes Objekt mit:
-- Bestaetigung der Aktualisierung
+- Bestätigung der Aktualisierung
 - Aktualisierte Einstellungen
 
-## Alternative Ablaeufe
+## Alternative Abläufe
 
-### A1: Nur eine Gruppe aendern
-1a. Nur eine Einstellungsgruppe wird uebergeben (z.B. nur `calendar`).
-3a. Der Request enthaelt nur die geaenderte Gruppe.
+### A1: Nur eine Gruppe ändern
+1a. Nur eine Einstellungsgruppe wird übergeben (z.B. nur `calendar`).
+3a. Der Request enthält nur die geänderte Gruppe.
 
-## Fehlerablaeufe
+## Fehlerabläufe
 
-### E1: Keine Einstellungen uebergeben
-2a. Keine der vier Gruppen wurde uebergeben.
+### E1: Keine Einstellungen übergeben
+2a. Keine der vier Gruppen wurde übergeben.
 3a. Der MCP-Server liefert eine Fehlermeldung: "Mindestens eine Einstellungsgruppe muss angegeben werden."
 
 ### E2: Authentifizierungsfehler (401/403)
@@ -67,4 +67,4 @@ Strukturiertes Objekt mit:
 
 ## Nachbedingungen
 
-- Die Einstellungen im System sind gemaess den Aenderungen aktualisiert.
+- Die Einstellungen im System sind gemäß den Änderungen aktualisiert.
