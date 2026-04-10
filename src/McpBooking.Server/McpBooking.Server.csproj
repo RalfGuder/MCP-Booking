@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ModelContextProtocol" Version="0.*" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\McpBooking.Domain\McpBooking.Domain.csproj" />
+    <ProjectReference Include="..\McpBooking.Application\McpBooking.Application.csproj" />
+    <ProjectReference Include="..\McpBooking.Infrastructure\McpBooking.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
