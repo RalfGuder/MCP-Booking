@@ -1,0 +1,69 @@
+---
+id: "018"
+title: Formular anlegen
+tags:
+  - UseCase
+  - Forms
+status: open
+---
+
+# UC-018: Formular anlegen
+
+**User Story:** [US-023 Tool: create_form](../001%20User%20Stories/US-023-create-form.md) | [Issue #23](https://github.com/RalfGuder/MCP-Booking/issues/23)
+
+## Akteure
+
+- **Primaer:** KI-Assistent (z.B. Claude)
+- **Sekundaer:** WP Booking Calendar REST API
+
+## Vorbedingungen
+
+1. Der MCP-Server ist gestartet und ueber stdio erreichbar.
+2. Die API-Zugangsdaten sind korrekt konfiguriert.
+
+## Ausloeser
+
+Der Nutzer moechte ein neues Buchungsformular erstellen (z.B. "Erstelle ein Formular 'Raumreservierung' mit Feldern fuer Name und E-Mail").
+
+## Hauptablauf
+
+1. Der KI-Assistent ruft das MCP-Tool `create_form` mit den Formulardaten auf.
+2. Der MCP-Server validiert die Pflichtfelder `title` und `structure_json`.
+3. Der MCP-Server sendet einen `POST /forms`-Request an die API.
+4. Die API erstellt das Formular und liefert eine Bestaetigung mit der neuen Formular-ID.
+5. Der MCP-Server transformiert die API-Antwort in ein strukturiertes Tool-Ergebnis.
+6. Der KI-Assistent bestaetigt dem Nutzer die Erstellung.
+
+## Parameter
+
+| Name | Typ | Pflicht | Validierung |
+|------|-----|---------|-------------|
+| title | string | ja | Nicht-leerer String |
+| structure_json | string | ja | Gueltiger JSON-String |
+| form_slug | string | nein | URL-freundlicher Slug |
+| settings_json | string | nein | Gueltiger JSON-String |
+| status | string | nein | Einer von: `published`, `draft` |
+
+## Ergebnis
+
+Strukturiertes Objekt mit:
+- Formular-ID des neu erstellten Formulars
+- Bestaetigung mit Titel und Status
+
+## Fehlerablaeufe
+
+### E1: Fehlende Pflichtfelder
+2a. `title` oder `structure_json` fehlen.
+3a. Der MCP-Server liefert eine Fehlermeldung: "Pflichtfeld [Feldname] fehlt."
+
+### E2: Ungueltiges JSON
+2a. `structure_json` oder `settings_json` sind kein gueltiges JSON.
+3a. Der MCP-Server liefert eine Fehlermeldung: "Ungueltiges JSON-Format in [Feldname]."
+
+### E3: Authentifizierungsfehler (401/403)
+3a. Die API liefert 401 oder 403.
+4a. Der MCP-Server liefert eine entsprechende Fehlermeldung.
+
+## Nachbedingungen
+
+- Ein neues Formular existiert im System (Status: `published` oder `draft`).
