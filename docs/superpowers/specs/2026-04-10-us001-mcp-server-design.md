@@ -76,16 +76,27 @@ Dependency Rule: Abhängigkeiten zeigen immer nach innen. Infrastructure impleme
 ### Entity: `Resource`
 
 ```csharp
+using System.Text.Json.Serialization;
+
 namespace McpBooking.Domain.Entities;
 
 public class Resource
 {
+    [JsonPropertyName("id")]
     public int Id { get; set; }
+
+    [JsonPropertyName("title")]
     public string Title { get; set; } = string.Empty;
+
+    [JsonPropertyName("cost")]
     public string? Cost { get; set; }
+
+    [JsonPropertyName("visitors")]
     public int? Visitors { get; set; }
 }
 ```
+
+**Hinweis:** Die `[JsonPropertyName]`-Attribute stellen sicher, dass die Deserialisierung der API-Antwort korrekt funktioniert, unabhängig von der eingestellten `PropertyNamingPolicy`. `System.Text.Json` ist Teil der .NET-Runtime und erfordert kein zusätzliches NuGet-Paket — die Dependency Rule der Domain bleibt gewahrt.
 
 ### Interface: `IResourceRepository`
 
