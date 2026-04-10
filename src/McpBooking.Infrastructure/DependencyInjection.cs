@@ -26,7 +26,7 @@ public static class DependencyInjection
         services.AddSingleton(options);
         services.AddHttpClient<BookingApiClient>(client =>
         {
-            client.BaseAddress = new Uri(options.BaseUrl);
+            client.BaseAddress = new Uri(options.BaseUrl.TrimEnd('/') + "/");
             var credentials = Convert.ToBase64String(
                 Encoding.UTF8.GetBytes($"{options.Username}:{options.Password}"));
             client.DefaultRequestHeaders.Authorization =

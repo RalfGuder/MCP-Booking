@@ -5,8 +5,12 @@ using McpBooking.Infrastructure.Configuration;
 using McpBooking.Server.Properties;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 var builder = Host.CreateApplicationBuilder(args);
+
+// Remove console logging – stdout is reserved exclusively for MCP JSON-RPC
+builder.Logging.ClearProviders();
 
 var options = new BookingApiOptions
 {

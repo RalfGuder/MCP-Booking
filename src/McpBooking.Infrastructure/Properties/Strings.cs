@@ -15,8 +15,8 @@ internal static class Strings
     /// <summary>
     /// Gets the relative path of the resources endpoint.
     /// </summary>
-    // "/resources"
-    internal static string ApiResourcesPath => Decode("L3Jlc291cmNlcw==");
+    // "resources"
+    internal static string ApiResourcesPath => Decode("cmVzb3VyY2Vz");
 
     /// <summary>
     /// Gets the query string format for pagination parameters (page and per_page).
