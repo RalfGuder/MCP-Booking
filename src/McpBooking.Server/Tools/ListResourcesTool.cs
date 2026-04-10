@@ -16,6 +16,12 @@ public class ListResourcesTool
         _useCase = useCase;
     }
 
+    private static readonly JsonSerializerOptions s_jsonOptions = new()
+    {
+        WriteIndented = true,
+        PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower
+    };
+
     [McpServerTool(Name = "list_resources"), Description("Listet alle buchbaren Ressourcen auf.")]
     public async Task<string> ExecuteAsync(
         [Description("Seite (Standard: 1)")] int page = 1,
@@ -28,11 +34,7 @@ public class ListResourcesTool
         try
         {
             var resources = await _useCase.ExecuteAsync(page, perPage, ct);
-            return JsonSerializer.Serialize(resources, new JsonSerializerOptions
-            {
-                WriteIndented = true,
-                PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower
-            });
+            return JsonSerializer.Serialize(resources, s_jsonOptions);
         }
         catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.Unauthorized)
         {
@@ -41,6 +43,10 @@ public class ListResourcesTool
         catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.Forbidden)
         {
             return "Fehler: Keine Berechtigung für diese Aktion.";
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode >= HttpStatusCode.InternalServerError)
+        {
+            return "Fehler: Serverfehler bei der Booking API.";
         }
         catch (HttpRequestException)
         {
