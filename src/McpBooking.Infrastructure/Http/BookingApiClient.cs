@@ -1,4 +1,3 @@
-// Copyright (c) 2026 RalfGuder. Licensed under the MIT License.
 using System.Net.Http.Json;
 
 namespace McpBooking.Infrastructure.Http;
@@ -6,18 +5,15 @@ namespace McpBooking.Infrastructure.Http;
 /// <summary>
 /// HTTP client wrapper for communicating with the WP Booking Calendar REST API.
 /// </summary>
-public class BookingApiClient
+/// <remarks>
+/// Initializes a new instance of the <see cref="BookingApiClient"/> class.
+/// </remarks>
+/// <param name="httpClient">The underlying HTTP client configured for the booking API.</param>
+public class BookingApiClient(HttpClient httpClient)
 {
-    private readonly HttpClient _httpClient;
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="BookingApiClient"/> class.
-    /// </summary>
-    /// <param name="httpClient">The underlying HTTP client configured for the booking API.</param>
-    public BookingApiClient(HttpClient httpClient)
-    {
-        _httpClient = httpClient;
-    }
+    private readonly HttpClient _httpClient = httpClient;
+
 
     /// <summary>
     /// Sends a GET request to the specified path and deserializes the response body as JSON.
