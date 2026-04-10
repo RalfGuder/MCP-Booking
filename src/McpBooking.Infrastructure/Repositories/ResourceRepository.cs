@@ -1,6 +1,7 @@
 using McpBooking.Domain.Entities;
 using McpBooking.Domain.Interfaces;
 using McpBooking.Infrastructure.Http;
+using McpBooking.Infrastructure.Properties;
 
 namespace McpBooking.Infrastructure.Repositories;
 
@@ -17,7 +18,7 @@ public class ResourceRepository : IResourceRepository
         int page = 1, int perPage = 20, CancellationToken ct = default)
     {
         var resources = await _client.GetAsync<List<Resource>>(
-            $"/resources?page={page}&per_page={perPage}", ct);
+            $"{Strings.ApiResourcesPath}{string.Format(Strings.QueryPageFormat, page, perPage)}", ct);
         return resources ?? [];
     }
 }
