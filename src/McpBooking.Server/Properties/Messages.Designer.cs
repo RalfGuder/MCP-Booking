@@ -65,4 +65,40 @@ internal static class Messages
     /// </summary>
     internal static string ErrorApiUnreachable =>
         ResourceManager.GetString("ErrorApiUnreachable", ResourceCulture)!;
+
+    /// <summary>
+    /// Gets the error message returned when a booking is not found (HTTP 404).
+    /// </summary>
+    internal static string ErrorBookingNotFound =>
+        ResourceManager.GetString("ErrorBookingNotFound", ResourceCulture)!;
+
+    /// <summary>
+    /// Gets the error message returned when the id parameter is invalid.
+    /// </summary>
+    internal static string ErrorInvalidId =>
+        ResourceManager.GetString("ErrorInvalidId", ResourceCulture)!;
+
+    /// <summary>
+    /// Gets the error message returned when the booking type parameter is invalid.
+    /// </summary>
+    internal static string ErrorInvalidBookingType =>
+        ResourceManager.GetString("ErrorInvalidBookingType", ResourceCulture)!;
+
+    /// <summary>
+    /// Gets the error message returned when a JSON parameter is invalid.
+    /// </summary>
+    internal static string ErrorInvalidJson =>
+        ResourceManager.GetString("ErrorInvalidJson", ResourceCulture)!;
+
+    /// <summary>
+    /// Gets the error message returned when the note parameter is empty.
+    /// </summary>
+    internal static string ErrorNoteEmpty =>
+        ResourceManager.GetString("ErrorNoteEmpty", ResourceCulture)!;
+
+    /// <summary>
+    /// Gets the success message returned when a booking is deleted.
+    /// </summary>
+    internal static string SuccessBookingDeleted =>
+        ResourceManager.GetString("SuccessBookingDeleted", ResourceCulture)!;
 }
