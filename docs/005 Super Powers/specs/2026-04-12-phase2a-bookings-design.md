@@ -2,7 +2,8 @@
 
 **Datum:** 2026-04-12
 **Scope:** 8 MCP-Tools fuer den Bookings-API-Bereich
-**Status:** Entwurf
+**Status:** Implementiert (PR #34, gemerged 2026-04-12)
+**Plan:** [2026-04-12-phase2a-bookings.md](../plans/2026-04-12-phase2a-bookings.md)
 **Vorgaenger:** [2026-04-10-us001-mcp-server-design.md](2026-04-10-us001-mcp-server-design.md) (Phase 1)
 
 ## Verknuepfte Artefakte
@@ -406,39 +407,27 @@ Mock: Use Cases via Moq.
 
 ## Dateien-Uebersicht
 
-### Neue Dateien (20)
+### Neue Dateien (6)
+
+**Hinweis:** Waehrend der Implementierung wurden die 8 Einzel-Tool-Klassen und 8 Einzel-UseCase-Klassen zu je einer konsolidierten Klasse refactored (BookingTool, BookingUseCase).
 
 | Schicht | Datei |
 |---------|-------|
 | Domain | `src/McpBooking.Domain/Entities/Booking.cs` |
 | Domain | `src/McpBooking.Domain/Interfaces/IBookingRepository.cs` |
 | Application | `src/McpBooking.Application/DTOs/BookingDto.cs` |
-| Application | `src/McpBooking.Application/UseCases/ListBookingsUseCase.cs` |
-| Application | `src/McpBooking.Application/UseCases/GetBookingUseCase.cs` |
-| Application | `src/McpBooking.Application/UseCases/CreateBookingUseCase.cs` |
-| Application | `src/McpBooking.Application/UseCases/UpdateBookingUseCase.cs` |
-| Application | `src/McpBooking.Application/UseCases/DeleteBookingUseCase.cs` |
-| Application | `src/McpBooking.Application/UseCases/ApproveBookingUseCase.cs` |
-| Application | `src/McpBooking.Application/UseCases/SetBookingPendingUseCase.cs` |
-| Application | `src/McpBooking.Application/UseCases/UpdateBookingNoteUseCase.cs` |
+| Application | `src/McpBooking.Application/UseCases/BookingUseCase.cs` |
 | Infrastructure | `src/McpBooking.Infrastructure/Repositories/BookingRepository.cs` |
-| Server | `src/McpBooking.Server/Tools/ListBookingsTool.cs` |
-| Server | `src/McpBooking.Server/Tools/GetBookingTool.cs` |
-| Server | `src/McpBooking.Server/Tools/CreateBookingTool.cs` |
-| Server | `src/McpBooking.Server/Tools/UpdateBookingTool.cs` |
-| Server | `src/McpBooking.Server/Tools/DeleteBookingTool.cs` |
-| Server | `src/McpBooking.Server/Tools/ApproveBookingTool.cs` |
-| Server | `src/McpBooking.Server/Tools/SetBookingPendingTool.cs` |
-| Server | `src/McpBooking.Server/Tools/UpdateBookingNoteTool.cs` |
+| Server | `src/McpBooking.Server/Tools/BookingTool.cs` |
 
-### Geaenderte Dateien (7+)
+### Geaenderte Dateien (8)
 
 | Datei | Aenderung |
 |-------|-----------|
 | `src/McpBooking.Infrastructure/Http/BookingApiClient.cs` | POST/PUT/DELETE Methoden |
 | `src/McpBooking.Infrastructure/DependencyInjection.cs` | BookingRepository registrieren |
 | `src/McpBooking.Infrastructure/Properties/Strings.cs` | API-Pfad-Konstanten |
-| `src/McpBooking.Server/Program.cs` | 8 Use Cases registrieren |
+| `src/McpBooking.Server/Program.cs` | BookingUseCase registrieren |
 | `src/McpBooking.Server/Properties/Messages.resx` | 6 neue Eintraege |
 | `src/McpBooking.Server/Properties/Messages.en.resx` | 6 neue Eintraege |
 | `src/McpBooking.Server/Properties/Messages.fr.resx` | 6 neue Eintraege |

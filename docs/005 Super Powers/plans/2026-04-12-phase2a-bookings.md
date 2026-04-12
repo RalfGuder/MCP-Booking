@@ -1,14 +1,18 @@
 # Phase 2a: Booking-Tools Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+**Status:** Implementiert (PR #34, gemerged 2026-04-12)
+
+> **Hinweis:** Dieser Plan wurde ausgefuehrt und anschliessend refactored. Die 8 Einzel-Tool-Klassen und 8 Einzel-UseCase-Klassen wurden zu je einer konsolidierten Klasse zusammengefasst (`BookingTool` mit 8 `[McpServerTool]`-Methoden, `BookingUseCase` mit 8 Operationen). Der Plan unten zeigt die urspruengliche Struktur vor dem Refactoring.
 
 **Goal:** Implement 8 MCP tools for the Bookings API area (list, get, create, update, delete, approve, pending, note) using vertical slices through all Clean Architecture layers.
 
-**Architecture:** Each tool is a vertical slice: Domain Entity/Interface, Application UseCase/DTO, Infrastructure Repository, Server Tool. Foundation types (Booking entity, IBookingRepository, BookingDto, BookingApiClient extensions, localization) are created first, then each tool is TDD'd as a complete slice.
+**Architecture:** Consolidated: 1 BookingTool (8 MCP methods), 1 BookingUseCase (8 operations), 1 BookingRepository (8 methods). Foundation types (Booking entity, IBookingRepository, BookingDto, BookingApiClient extensions, localization) created first, then TDD'd.
 
 **Tech Stack:** .NET 10, ModelContextProtocol SDK, MSTest.Sdk, Moq, Shouldly, System.Text.Json
 
 **Spec:** [2026-04-12-phase2a-bookings-design.md](../specs/2026-04-12-phase2a-bookings-design.md)
+
+**Result:** 60 Tests (50 neu + 10 bestehend), 0 fehlgeschlagen. 13 Commits auf Branch `feature/phase2a-bookings`.
 
 ---
 
