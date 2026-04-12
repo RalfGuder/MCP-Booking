@@ -24,6 +24,14 @@ var options = new BookingApiOptions
 
 builder.Services.AddInfrastructure(options);
 builder.Services.AddScoped<ListResourcesUseCase>();
+builder.Services.AddScoped<ListBookingsUseCase>();
+builder.Services.AddScoped<GetBookingUseCase>();
+builder.Services.AddScoped<CreateBookingUseCase>();
+builder.Services.AddScoped<UpdateBookingUseCase>();
+builder.Services.AddScoped<DeleteBookingUseCase>();
+builder.Services.AddScoped<ApproveBookingUseCase>();
+builder.Services.AddScoped<SetBookingPendingUseCase>();
+builder.Services.AddScoped<UpdateBookingNoteUseCase>();
 
 builder.Services.AddMcpServer()
     .WithStdioServerTransport()
