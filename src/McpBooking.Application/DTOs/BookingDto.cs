@@ -1,5 +1,6 @@
 // Copyright (c) 2026 RalfGuder. Licensed under the MIT License.
 using System.Text.Json;
+using McpBooking.Domain.Entities;
 
 namespace McpBooking.Application.DTOs;
 
@@ -16,7 +17,7 @@ namespace McpBooking.Application.DTOs;
 /// <param name="IsNew">Whether the booking is new/unread, or <see langword="null"/> if not set.</param>
 /// <param name="Note">The note, or <see langword="null"/> if not set.</param>
 public record BookingDto(
-    int Id, int BookingType, List<string> Dates,
+    int Id, int BookingType, List<BookingDate> Dates,
     JsonElement? FormData, string Status,
     string? SortDate, string? ModificationDate,
     bool? IsNew, string? Note);

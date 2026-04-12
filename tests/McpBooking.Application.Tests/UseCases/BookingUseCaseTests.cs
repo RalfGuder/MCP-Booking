@@ -23,8 +23,8 @@ public class BookingUseCaseTests
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(new List<Booking>
             {
-                new() { Id = 1, BookingType = 2, Dates = ["2026-05-01"], Status = "approved" },
-                new() { Id = 2, BookingType = 3, Dates = ["2026-06-01", "2026-06-02"], Status = "pending" }
+                new() { Id = 1, BookingType = 2, Dates = [new() { BookingDateValue = "2026-05-01T00:00:00", Approved = 1 }], Status = "approved" },
+                new() { Id = 2, BookingType = 3, Dates = [new() { BookingDateValue = "2026-06-01T00:00:00", Approved = 1 }, new() { BookingDateValue = "2026-06-02T00:00:00", Approved = 1 }], Status = "pending" }
             });
         var useCase = new BookingUseCase(mock.Object);
 
@@ -97,7 +97,7 @@ public class BookingUseCaseTests
             {
                 Id = 42,
                 BookingType = 3,
-                Dates = ["2026-05-01", "2026-05-02"],
+                Dates = [new() { BookingDateValue = "2026-05-01T00:00:00", Approved = 1 }, new() { BookingDateValue = "2026-05-02T00:00:00", Approved = 1 }],
                 Status = "approved",
                 SortDate = "2026-05-01",
                 ModificationDate = "2026-04-12",
@@ -143,7 +143,7 @@ public class BookingUseCaseTests
             {
                 Id = 99,
                 BookingType = 2,
-                Dates = ["2026-05-10"],
+                Dates = [new() { BookingDateValue = "2026-05-10T00:00:00", Approved = 1 }],
                 Status = "pending",
                 SortDate = "2026-05-10",
                 ModificationDate = "2026-04-12",
@@ -193,7 +193,7 @@ public class BookingUseCaseTests
             {
                 Id = 1,
                 BookingType = 2,
-                Dates = ["2026-05-10"],
+                Dates = [new() { BookingDateValue = "2026-05-10T00:00:00", Approved = 1 }],
                 Status = "approved",
                 SortDate = "2026-05-10",
                 ModificationDate = "2026-04-12",
@@ -254,7 +254,7 @@ public class BookingUseCaseTests
             {
                 Id = 1,
                 BookingType = 2,
-                Dates = ["2026-05-01"],
+                Dates = [new() { BookingDateValue = "2026-05-01T00:00:00", Approved = 1 }],
                 Status = "approved",
                 SortDate = "2026-05-01",
                 ModificationDate = "2026-04-12",
@@ -296,7 +296,7 @@ public class BookingUseCaseTests
             {
                 Id = 1,
                 BookingType = 2,
-                Dates = ["2026-05-01"],
+                Dates = [new() { BookingDateValue = "2026-05-01T00:00:00", Approved = 1 }],
                 Status = "pending",
                 SortDate = "2026-05-01",
                 ModificationDate = "2026-04-12",
@@ -338,7 +338,7 @@ public class BookingUseCaseTests
             {
                 Id = 1,
                 BookingType = 2,
-                Dates = ["2026-05-10"],
+                Dates = [new() { BookingDateValue = "2026-05-10T00:00:00", Approved = 1 }],
                 Status = "approved",
                 SortDate = "2026-05-10",
                 ModificationDate = "2026-04-12",

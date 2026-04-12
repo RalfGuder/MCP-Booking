@@ -74,6 +74,10 @@ public class BookingTool
         {
             return Messages.ErrorApiUnreachable;
         }
+        catch (JsonException ex)
+        {
+            return $"Deserialisierungsfehler: {ex.Message}";
+        }
     }
 
     /// <summary>

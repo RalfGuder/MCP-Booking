@@ -12,7 +12,7 @@ public class Booking
     /// <summary>
     /// Gets or sets the unique identifier of the booking.
     /// </summary>
-    [JsonPropertyName("id")]
+    [JsonPropertyName("booking_id")]
     public int Id { get; set; }
 
     /// <summary>
@@ -25,7 +25,7 @@ public class Booking
     /// Gets or sets the list of booked dates.
     /// </summary>
     [JsonPropertyName("dates")]
-    public List<string> Dates { get; set; } = [];
+    public List<BookingDate> Dates { get; set; } = [];
 
     /// <summary>
     /// Gets or sets the submitted form data as a raw JSON element.

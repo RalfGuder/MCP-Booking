@@ -3,6 +3,7 @@ using System.Net;
 using System.Text.Json;
 using McpBooking.Application.DTOs;
 using McpBooking.Application.UseCases;
+using McpBooking.Domain.Entities;
 using McpBooking.Domain.Interfaces;
 using McpBooking.Server.Tools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -29,7 +30,7 @@ public class BookingToolTests
     {
         var bookings = new List<BookingDto>
         {
-            new(1, 2, ["2026-05-01"], null, "approved", null, null, null, null)
+            new(1, 2, [new BookingDate { BookingDateValue = "2026-05-01T00:00:00", Approved = 1 }], null, "approved", null, null, null, null)
         };
         var tool = CreateTool(mock => mock
             .Setup(u => u.ListAsync(
@@ -92,7 +93,7 @@ public class BookingToolTests
     [TestMethod]
     public async Task GetBookingAsync_ValidId_ReturnsJson()
     {
-        var booking = new BookingDto(42, 2, ["2026-05-01"], null, "approved", null, null, null, null);
+        var booking = new BookingDto(42, 2, [new BookingDate { BookingDateValue = "2026-05-01T00:00:00", Approved = 1 }], null, "approved", null, null, null, null);
         var tool = CreateTool(mock => mock
             .Setup(u => u.GetAsync(It.IsAny<int>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(booking));
@@ -143,7 +144,7 @@ public class BookingToolTests
     [TestMethod]
     public async Task CreateBookingAsync_ValidParams_ReturnsJson()
     {
-        var booking = new BookingDto(55, 2, ["2026-05-10"], null, "pending", null, null, null, null);
+        var booking = new BookingDto(55, 2, [new BookingDate { BookingDateValue = "2026-05-10T00:00:00", Approved = 1 }], null, "pending", null, null, null, null);
         var tool = CreateTool(mock => mock
             .Setup(u => u.CreateAsync(
                 It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(),
@@ -206,7 +207,7 @@ public class BookingToolTests
     [TestMethod]
     public async Task UpdateBookingAsync_ValidParams_ReturnsJson()
     {
-        var booking = new BookingDto(42, 2, ["2026-05-10"], null, "approved", null, null, null, null);
+        var booking = new BookingDto(42, 2, [new BookingDate { BookingDateValue = "2026-05-10T00:00:00", Approved = 1 }], null, "approved", null, null, null, null);
         var tool = CreateTool(mock => mock
             .Setup(u => u.UpdateAsync(
                 It.IsAny<int>(), It.IsAny<string?>(), It.IsAny<int?>(), It.IsAny<string?>(),
@@ -307,7 +308,7 @@ public class BookingToolTests
     [TestMethod]
     public async Task ApproveBookingAsync_ValidId_ReturnsJson()
     {
-        var booking = new BookingDto(1, 2, ["2026-05-01"], null, "approved", null, null, null, null);
+        var booking = new BookingDto(1, 2, [new BookingDate { BookingDateValue = "2026-05-01T00:00:00", Approved = 1 }], null, "approved", null, null, null, null);
         var tool = CreateTool(mock => mock
             .Setup(u => u.ApproveAsync(It.IsAny<int>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(booking));
@@ -346,7 +347,7 @@ public class BookingToolTests
     [TestMethod]
     public async Task SetBookingPendingAsync_ValidId_ReturnsJson()
     {
-        var booking = new BookingDto(1, 2, ["2026-05-01"], null, "pending", null, null, null, null);
+        var booking = new BookingDto(1, 2, [new BookingDate { BookingDateValue = "2026-05-01T00:00:00", Approved = 1 }], null, "pending", null, null, null, null);
         var tool = CreateTool(mock => mock
             .Setup(u => u.SetPendingAsync(It.IsAny<int>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(booking));
@@ -385,7 +386,7 @@ public class BookingToolTests
     [TestMethod]
     public async Task UpdateBookingNoteAsync_ValidParams_ReturnsJson()
     {
-        var booking = new BookingDto(1, 2, ["2026-05-10"], null, "approved", null, null, null, "Neue Notiz");
+        var booking = new BookingDto(1, 2, [new BookingDate { BookingDateValue = "2026-05-10T00:00:00", Approved = 1 }], null, "approved", null, null, null, "Neue Notiz");
         var tool = CreateTool(mock => mock
             .Setup(u => u.UpdateNoteAsync(
                 It.IsAny<int>(), It.IsAny<string>(),

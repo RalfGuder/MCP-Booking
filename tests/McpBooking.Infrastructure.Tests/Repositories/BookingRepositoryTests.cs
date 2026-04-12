@@ -43,8 +43,8 @@ public class BookingRepositoryTests
     {
         var json = JsonSerializer.Serialize(new[]
         {
-            new { id = 1, booking_type = 2, dates = new[] { "2026-05-01" }, status = "approved" },
-            new { id = 2, booking_type = 3, dates = new[] { "2026-06-01", "2026-06-02" }, status = "pending" }
+            new { booking_id = 1, booking_type = 2, dates = new[] { new { booking_date = "2026-05-01T00:00:00", approved = 1 } }, status = "approved" },
+            new { booking_id = 2, booking_type = 3, dates = new[] { new { booking_date = "2026-06-01T00:00:00", approved = 1 }, new { booking_date = "2026-06-02T00:00:00", approved = 1 } }, status = "pending" }
         });
         var (repo, _) = CreateRepoWithMockHttp(HttpStatusCode.OK, json);
 

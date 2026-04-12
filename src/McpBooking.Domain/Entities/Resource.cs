@@ -11,7 +11,7 @@ public class Resource
     /// <summary>
     /// Gets or sets the unique identifier of the resource.
     /// </summary>
-    [JsonPropertyName("id")]
+    [JsonPropertyName("booking_type_id")]
     public int Id { get; set; }
 
     /// <summary>
