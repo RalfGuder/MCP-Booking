@@ -50,4 +50,22 @@
   <data name="ErrorApiUnreachable" xml:space="preserve">
     <value>Error: The Booking API is unreachable.</value>
   </data>
+  <data name="ErrorBookingNotFound" xml:space="preserve">
+    <value>Error: Booking with ID {0} not found.</value>
+  </data>
+  <data name="ErrorInvalidId" xml:space="preserve">
+    <value>Error: ID must be &gt;= 1.</value>
+  </data>
+  <data name="ErrorInvalidBookingType" xml:space="preserve">
+    <value>Error: Booking type must be &gt;= 1.</value>
+  </data>
+  <data name="ErrorInvalidJson" xml:space="preserve">
+    <value>Error: {0} does not contain valid JSON.</value>
+  </data>
+  <data name="ErrorNoteEmpty" xml:space="preserve">
+    <value>Error: Note must not be empty.</value>
+  </data>
+  <data name="SuccessBookingDeleted" xml:space="preserve">
+    <value>Booking {0} has been deleted.</value>
+  </data>
 </root>

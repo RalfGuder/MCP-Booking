@@ -33,6 +33,7 @@ public static class DependencyInjection
                 new AuthenticationHeaderValue("Basic", credentials);
         });
         services.AddScoped<IResourceRepository, ResourceRepository>();
+        services.AddScoped<IBookingRepository, BookingRepository>();
         return services;
     }
 }

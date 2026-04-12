@@ -50,4 +50,22 @@
   <data name="ErrorApiUnreachable" xml:space="preserve">
     <value>Fehler: Die Booking API ist nicht erreichbar.</value>
   </data>
+  <data name="ErrorBookingNotFound" xml:space="preserve">
+    <value>Fehler: Buchung mit ID {0} nicht gefunden.</value>
+  </data>
+  <data name="ErrorInvalidId" xml:space="preserve">
+    <value>Fehler: ID muss &gt;= 1 sein.</value>
+  </data>
+  <data name="ErrorInvalidBookingType" xml:space="preserve">
+    <value>Fehler: Buchungstyp muss &gt;= 1 sein.</value>
+  </data>
+  <data name="ErrorInvalidJson" xml:space="preserve">
+    <value>Fehler: {0} enthält kein gültiges JSON.</value>
+  </data>
+  <data name="ErrorNoteEmpty" xml:space="preserve">
+    <value>Fehler: Notiz darf nicht leer sein.</value>
+  </data>
+  <data name="SuccessBookingDeleted" xml:space="preserve">
+    <value>Buchung {0} wurde gelöscht.</value>
+  </data>
 </root>

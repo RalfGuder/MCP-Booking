@@ -42,8 +42,8 @@ public class ResourceRepositoryTests
     {
         var json = JsonSerializer.Serialize(new[]
         {
-            new { id = 1, title = "Gemeindesaal", cost = (string?)"50", visitors = (int?)30 },
-            new { id = 2, title = "Vereinsraum", cost = (string?)null, visitors = (int?)null }
+            new { booking_type_id = 1, title = "Gemeindesaal", cost = (string?)"50", visitors = (int?)30 },
+            new { booking_type_id = 2, title = "Vereinsraum", cost = (string?)null, visitors = (int?)null }
         });
         var (repo, _) = CreateRepoWithMockHttp(HttpStatusCode.OK, json);
 
