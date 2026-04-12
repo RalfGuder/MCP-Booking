@@ -23,7 +23,7 @@
 - Create: `src/McpBooking.Domain/Interfaces/IBookingRepository.cs`
 - Create: `src/McpBooking.Application/DTOs/BookingDto.cs`
 
-- [ ] **Step 1: Create Booking entity**
+- [x] **Step 1: Create Booking entity**
 
 Create `src/McpBooking.Domain/Entities/Booking.cs`:
 
@@ -95,7 +95,7 @@ public class Booking
 }
 ```
 
-- [ ] **Step 2: Create IBookingRepository interface**
+- [x] **Step 2: Create IBookingRepository interface**
 
 Create `src/McpBooking.Domain/Interfaces/IBookingRepository.cs`:
 
@@ -199,7 +199,7 @@ public interface IBookingRepository
 }
 ```
 
-- [ ] **Step 3: Create BookingDto**
+- [x] **Step 3: Create BookingDto**
 
 Create `src/McpBooking.Application/DTOs/BookingDto.cs`:
 
@@ -228,12 +228,12 @@ public record BookingDto(
     bool? IsNew, string? Note);
 ```
 
-- [ ] **Step 4: Verify build**
+- [x] **Step 4: Verify build**
 
 Run: `dotnet build`
 Expected: Build succeeds with 0 errors.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add src/McpBooking.Domain/Entities/Booking.cs src/McpBooking.Domain/Interfaces/IBookingRepository.cs src/McpBooking.Application/DTOs/BookingDto.cs
@@ -248,7 +248,7 @@ git commit -m "feat: add Booking entity, IBookingRepository, and BookingDto"
 - Modify: `src/McpBooking.Infrastructure/Http/BookingApiClient.cs`
 - Modify: `src/McpBooking.Infrastructure/Properties/Strings.cs`
 
-- [ ] **Step 1: Add PostAsync, PutAsync, DeleteAsync to BookingApiClient**
+- [x] **Step 1: Add PostAsync, PutAsync, DeleteAsync to BookingApiClient**
 
 Add these methods to `src/McpBooking.Infrastructure/Http/BookingApiClient.cs` after the existing `GetAsync<T>` method:
 
@@ -309,7 +309,7 @@ Add these methods to `src/McpBooking.Infrastructure/Http/BookingApiClient.cs` af
     }
 ```
 
-- [ ] **Step 2: Add booking API path constants to Infrastructure Strings.cs**
+- [x] **Step 2: Add booking API path constants to Infrastructure Strings.cs**
 
 Add these properties to `src/McpBooking.Infrastructure/Properties/Strings.cs` before the `Decode` method. Use `echo -n "<value>" | base64` to compute each Base64 string.
 
@@ -393,12 +393,12 @@ Add these properties to `src/McpBooking.Infrastructure/Properties/Strings.cs` be
     internal static string QueryOrderFormat => Decode("Jm9yZGVyPXswfQ==");
 ```
 
-- [ ] **Step 3: Verify build**
+- [x] **Step 3: Verify build**
 
 Run: `dotnet build`
 Expected: Build succeeds with 0 errors.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add src/McpBooking.Infrastructure/Http/BookingApiClient.cs src/McpBooking.Infrastructure/Properties/Strings.cs
@@ -416,7 +416,7 @@ git commit -m "feat: add POST/PUT/DELETE to BookingApiClient and booking path co
 - Modify: `src/McpBooking.Server/Properties/Messages.es.resx`
 - Modify: `src/McpBooking.Server/Properties/Messages.Designer.cs`
 
-- [ ] **Step 1: Add entries to Messages.resx (German, default)**
+- [x] **Step 1: Add entries to Messages.resx (German, default)**
 
 Add before the closing `</root>` tag in `src/McpBooking.Server/Properties/Messages.resx`:
 
@@ -441,7 +441,7 @@ Add before the closing `</root>` tag in `src/McpBooking.Server/Properties/Messag
   </data>
 ```
 
-- [ ] **Step 2: Add entries to Messages.en.resx**
+- [x] **Step 2: Add entries to Messages.en.resx**
 
 Add before the closing `</root>` tag in `src/McpBooking.Server/Properties/Messages.en.resx`:
 
@@ -466,7 +466,7 @@ Add before the closing `</root>` tag in `src/McpBooking.Server/Properties/Messag
   </data>
 ```
 
-- [ ] **Step 3: Add entries to Messages.fr.resx**
+- [x] **Step 3: Add entries to Messages.fr.resx**
 
 Add before the closing `</root>` tag in `src/McpBooking.Server/Properties/Messages.fr.resx`:
 
@@ -491,7 +491,7 @@ Add before the closing `</root>` tag in `src/McpBooking.Server/Properties/Messag
   </data>
 ```
 
-- [ ] **Step 4: Add entries to Messages.es.resx**
+- [x] **Step 4: Add entries to Messages.es.resx**
 
 Add before the closing `</root>` tag in `src/McpBooking.Server/Properties/Messages.es.resx`:
 
@@ -516,7 +516,7 @@ Add before the closing `</root>` tag in `src/McpBooking.Server/Properties/Messag
   </data>
 ```
 
-- [ ] **Step 5: Add properties to Messages.Designer.cs**
+- [x] **Step 5: Add properties to Messages.Designer.cs**
 
 Add these properties to `src/McpBooking.Server/Properties/Messages.Designer.cs` before the closing `}`:
 
@@ -558,12 +558,12 @@ Add these properties to `src/McpBooking.Server/Properties/Messages.Designer.cs` 
         ResourceManager.GetString("SuccessBookingDeleted", ResourceCulture)!;
 ```
 
-- [ ] **Step 6: Verify build**
+- [x] **Step 6: Verify build**
 
 Run: `dotnet build`
 Expected: Build succeeds with 0 errors.
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add src/McpBooking.Server/Properties/
@@ -583,7 +583,7 @@ git commit -m "feat: add booking localization entries (DE, EN, FR, ES)"
 - Create: `tests/McpBooking.Server.Tests/Tools/ListBookingsToolTests.cs`
 - Modify: `src/McpBooking.Infrastructure/DependencyInjection.cs`
 
-- [ ] **Step 1: Write Application test**
+- [x] **Step 1: Write Application test**
 
 Create `tests/McpBooking.Application.Tests/UseCases/ListBookingsUseCaseTests.cs`:
 
@@ -662,12 +662,12 @@ public class ListBookingsUseCaseTests
 }
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: FAIL — `ListBookingsUseCase` does not exist.
 
-- [ ] **Step 3: Write ListBookingsUseCase**
+- [x] **Step 3: Write ListBookingsUseCase**
 
 Create `src/McpBooking.Application/UseCases/ListBookingsUseCase.cs`:
 
@@ -730,12 +730,12 @@ public class ListBookingsUseCase
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: All tests PASS.
 
-- [ ] **Step 5: Write Infrastructure test**
+- [x] **Step 5: Write Infrastructure test**
 
 Create `tests/McpBooking.Infrastructure.Tests/Repositories/BookingRepositoryTests.cs`:
 
@@ -833,12 +833,12 @@ public class BookingRepositoryTests
 }
 ```
 
-- [ ] **Step 6: Run test to verify it fails**
+- [x] **Step 6: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Infrastructure.Tests`
 Expected: FAIL — `BookingRepository` does not exist.
 
-- [ ] **Step 7: Write BookingRepository with ListAsync**
+- [x] **Step 7: Write BookingRepository with ListAsync**
 
 Create `src/McpBooking.Infrastructure/Repositories/BookingRepository.cs`:
 
@@ -960,7 +960,7 @@ public class BookingRepository : IBookingRepository
 }
 ```
 
-- [ ] **Step 8: Register IBookingRepository in DI**
+- [x] **Step 8: Register IBookingRepository in DI**
 
 Add to `src/McpBooking.Infrastructure/DependencyInjection.cs` after the existing `AddScoped<IResourceRepository, ResourceRepository>()` line:
 
@@ -970,12 +970,12 @@ Add to `src/McpBooking.Infrastructure/DependencyInjection.cs` after the existing
 
 Also add the using at the top if not already present — it should already be covered since `IBookingRepository` is in the same namespace as `IResourceRepository`.
 
-- [ ] **Step 9: Run test to verify it passes**
+- [x] **Step 9: Run test to verify it passes**
 
 Run: `dotnet test tests/McpBooking.Infrastructure.Tests`
 Expected: All tests PASS.
 
-- [ ] **Step 10: Write Server test**
+- [x] **Step 10: Write Server test**
 
 Create `tests/McpBooking.Server.Tests/Tools/ListBookingsToolTests.cs`:
 
@@ -1067,12 +1067,12 @@ public class ListBookingsToolTests
 }
 ```
 
-- [ ] **Step 11: Run test to verify it fails**
+- [x] **Step 11: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Server.Tests`
 Expected: FAIL — `ListBookingsTool` does not exist.
 
-- [ ] **Step 12: Write ListBookingsTool**
+- [x] **Step 12: Write ListBookingsTool**
 
 Create `src/McpBooking.Server/Tools/ListBookingsTool.cs`:
 
@@ -1169,12 +1169,12 @@ public class ListBookingsTool
 }
 ```
 
-- [ ] **Step 13: Run all tests**
+- [x] **Step 13: Run all tests**
 
 Run: `dotnet test`
 Expected: All tests PASS (10 existing + new tests).
 
-- [ ] **Step 14: Commit**
+- [x] **Step 14: Commit**
 
 ```bash
 git add src/McpBooking.Application/UseCases/ListBookingsUseCase.cs src/McpBooking.Infrastructure/Repositories/BookingRepository.cs src/McpBooking.Infrastructure/DependencyInjection.cs src/McpBooking.Server/Tools/ListBookingsTool.cs tests/McpBooking.Application.Tests/UseCases/ListBookingsUseCaseTests.cs tests/McpBooking.Infrastructure.Tests/Repositories/BookingRepositoryTests.cs tests/McpBooking.Server.Tests/Tools/ListBookingsToolTests.cs
@@ -1193,7 +1193,7 @@ git commit -m "feat(US-006): add list_bookings tool with TDD"
 
 Note: `BookingRepository.GetAsync` was already written in Task 4 (the full repository).
 
-- [ ] **Step 1: Write Application test**
+- [x] **Step 1: Write Application test**
 
 Create `tests/McpBooking.Application.Tests/UseCases/GetBookingUseCaseTests.cs`:
 
@@ -1245,12 +1245,12 @@ public class GetBookingUseCaseTests
 }
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: FAIL — `GetBookingUseCase` does not exist.
 
-- [ ] **Step 3: Write GetBookingUseCase**
+- [x] **Step 3: Write GetBookingUseCase**
 
 Create `src/McpBooking.Application/UseCases/GetBookingUseCase.cs`:
 
@@ -1296,12 +1296,12 @@ public class GetBookingUseCase
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: All tests PASS.
 
-- [ ] **Step 5: Write Server test**
+- [x] **Step 5: Write Server test**
 
 Create `tests/McpBooking.Server.Tests/Tools/GetBookingToolTests.cs`:
 
@@ -1383,12 +1383,12 @@ public class GetBookingToolTests
 }
 ```
 
-- [ ] **Step 6: Run test to verify it fails**
+- [x] **Step 6: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Server.Tests`
 Expected: FAIL — `GetBookingTool` does not exist.
 
-- [ ] **Step 7: Write GetBookingTool**
+- [x] **Step 7: Write GetBookingTool**
 
 Create `src/McpBooking.Server/Tools/GetBookingTool.cs`:
 
@@ -1470,12 +1470,12 @@ public class GetBookingTool
 }
 ```
 
-- [ ] **Step 8: Run all tests**
+- [x] **Step 8: Run all tests**
 
 Run: `dotnet test`
 Expected: All tests PASS.
 
-- [ ] **Step 9: Commit**
+- [x] **Step 9: Commit**
 
 ```bash
 git add src/McpBooking.Application/UseCases/GetBookingUseCase.cs src/McpBooking.Server/Tools/GetBookingTool.cs tests/McpBooking.Application.Tests/UseCases/GetBookingUseCaseTests.cs tests/McpBooking.Server.Tests/Tools/GetBookingToolTests.cs
@@ -1492,7 +1492,7 @@ git commit -m "feat(US-008): add get_booking tool with TDD"
 - Create: `tests/McpBooking.Application.Tests/UseCases/CreateBookingUseCaseTests.cs`
 - Create: `tests/McpBooking.Server.Tests/Tools/CreateBookingToolTests.cs`
 
-- [ ] **Step 1: Write Application test**
+- [x] **Step 1: Write Application test**
 
 Create `tests/McpBooking.Application.Tests/UseCases/CreateBookingUseCaseTests.cs`:
 
@@ -1543,12 +1543,12 @@ public class CreateBookingUseCaseTests
 }
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: FAIL — `CreateBookingUseCase` does not exist.
 
-- [ ] **Step 3: Write CreateBookingUseCase**
+- [x] **Step 3: Write CreateBookingUseCase**
 
 Create `src/McpBooking.Application/UseCases/CreateBookingUseCase.cs`:
 
@@ -1598,12 +1598,12 @@ public class CreateBookingUseCase
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: All tests PASS.
 
-- [ ] **Step 5: Write Server test**
+- [x] **Step 5: Write Server test**
 
 Create `tests/McpBooking.Server.Tests/Tools/CreateBookingToolTests.cs`:
 
@@ -1697,12 +1697,12 @@ public class CreateBookingToolTests
 }
 ```
 
-- [ ] **Step 6: Run test to verify it fails**
+- [x] **Step 6: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Server.Tests`
 Expected: FAIL — `CreateBookingTool` does not exist.
 
-- [ ] **Step 7: Write CreateBookingTool**
+- [x] **Step 7: Write CreateBookingTool**
 
 Create `src/McpBooking.Server/Tools/CreateBookingTool.cs`:
 
@@ -1799,12 +1799,12 @@ public class CreateBookingTool
 }
 ```
 
-- [ ] **Step 8: Run all tests**
+- [x] **Step 8: Run all tests**
 
 Run: `dotnet test`
 Expected: All tests PASS.
 
-- [ ] **Step 9: Commit**
+- [x] **Step 9: Commit**
 
 ```bash
 git add src/McpBooking.Application/UseCases/CreateBookingUseCase.cs src/McpBooking.Server/Tools/CreateBookingTool.cs tests/McpBooking.Application.Tests/UseCases/CreateBookingUseCaseTests.cs tests/McpBooking.Server.Tests/Tools/CreateBookingToolTests.cs
@@ -1821,7 +1821,7 @@ git commit -m "feat(US-007): add create_booking tool with TDD"
 - Create: `tests/McpBooking.Application.Tests/UseCases/UpdateBookingUseCaseTests.cs`
 - Create: `tests/McpBooking.Server.Tests/Tools/UpdateBookingToolTests.cs`
 
-- [ ] **Step 1: Write Application test**
+- [x] **Step 1: Write Application test**
 
 Create `tests/McpBooking.Application.Tests/UseCases/UpdateBookingUseCaseTests.cs`:
 
@@ -1867,12 +1867,12 @@ public class UpdateBookingUseCaseTests
 }
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: FAIL — `UpdateBookingUseCase` does not exist.
 
-- [ ] **Step 3: Write UpdateBookingUseCase**
+- [x] **Step 3: Write UpdateBookingUseCase**
 
 Create `src/McpBooking.Application/UseCases/UpdateBookingUseCase.cs`:
 
@@ -1923,12 +1923,12 @@ public class UpdateBookingUseCase
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: All tests PASS.
 
-- [ ] **Step 5: Write Server test**
+- [x] **Step 5: Write Server test**
 
 Create `tests/McpBooking.Server.Tests/Tools/UpdateBookingToolTests.cs`:
 
@@ -2012,12 +2012,12 @@ public class UpdateBookingToolTests
 }
 ```
 
-- [ ] **Step 6: Run test to verify it fails**
+- [x] **Step 6: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Server.Tests`
 Expected: FAIL — `UpdateBookingTool` does not exist.
 
-- [ ] **Step 7: Write UpdateBookingTool**
+- [x] **Step 7: Write UpdateBookingTool**
 
 Create `src/McpBooking.Server/Tools/UpdateBookingTool.cs`:
 
@@ -2120,12 +2120,12 @@ public class UpdateBookingTool
 }
 ```
 
-- [ ] **Step 8: Run all tests**
+- [x] **Step 8: Run all tests**
 
 Run: `dotnet test`
 Expected: All tests PASS.
 
-- [ ] **Step 9: Commit**
+- [x] **Step 9: Commit**
 
 ```bash
 git add src/McpBooking.Application/UseCases/UpdateBookingUseCase.cs src/McpBooking.Server/Tools/UpdateBookingTool.cs tests/McpBooking.Application.Tests/UseCases/UpdateBookingUseCaseTests.cs tests/McpBooking.Server.Tests/Tools/UpdateBookingToolTests.cs
@@ -2142,7 +2142,7 @@ git commit -m "feat(US-009): add update_booking tool with TDD"
 - Create: `tests/McpBooking.Application.Tests/UseCases/DeleteBookingUseCaseTests.cs`
 - Create: `tests/McpBooking.Server.Tests/Tools/DeleteBookingToolTests.cs`
 
-- [ ] **Step 1: Write Application test**
+- [x] **Step 1: Write Application test**
 
 Create `tests/McpBooking.Application.Tests/UseCases/DeleteBookingUseCaseTests.cs`:
 
@@ -2172,12 +2172,12 @@ public class DeleteBookingUseCaseTests
 }
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: FAIL — `DeleteBookingUseCase` does not exist.
 
-- [ ] **Step 3: Write DeleteBookingUseCase**
+- [x] **Step 3: Write DeleteBookingUseCase**
 
 Create `src/McpBooking.Application/UseCases/DeleteBookingUseCase.cs`:
 
@@ -2215,12 +2215,12 @@ public class DeleteBookingUseCase
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: All tests PASS.
 
-- [ ] **Step 5: Write Server test**
+- [x] **Step 5: Write Server test**
 
 Create `tests/McpBooking.Server.Tests/Tools/DeleteBookingToolTests.cs`:
 
@@ -2298,12 +2298,12 @@ public class DeleteBookingToolTests
 }
 ```
 
-- [ ] **Step 6: Run test to verify it fails**
+- [x] **Step 6: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Server.Tests`
 Expected: FAIL — `DeleteBookingTool` does not exist.
 
-- [ ] **Step 7: Write DeleteBookingTool**
+- [x] **Step 7: Write DeleteBookingTool**
 
 Create `src/McpBooking.Server/Tools/DeleteBookingTool.cs`:
 
@@ -2376,12 +2376,12 @@ public class DeleteBookingTool
 }
 ```
 
-- [ ] **Step 8: Run all tests**
+- [x] **Step 8: Run all tests**
 
 Run: `dotnet test`
 Expected: All tests PASS.
 
-- [ ] **Step 9: Commit**
+- [x] **Step 9: Commit**
 
 ```bash
 git add src/McpBooking.Application/UseCases/DeleteBookingUseCase.cs src/McpBooking.Server/Tools/DeleteBookingTool.cs tests/McpBooking.Application.Tests/UseCases/DeleteBookingUseCaseTests.cs tests/McpBooking.Server.Tests/Tools/DeleteBookingToolTests.cs
@@ -2398,7 +2398,7 @@ git commit -m "feat(US-010): add delete_booking tool with TDD"
 - Create: `tests/McpBooking.Application.Tests/UseCases/ApproveBookingUseCaseTests.cs`
 - Create: `tests/McpBooking.Server.Tests/Tools/ApproveBookingToolTests.cs`
 
-- [ ] **Step 1: Write Application test**
+- [x] **Step 1: Write Application test**
 
 Create `tests/McpBooking.Application.Tests/UseCases/ApproveBookingUseCaseTests.cs`:
 
@@ -2444,12 +2444,12 @@ public class ApproveBookingUseCaseTests
 }
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: FAIL — `ApproveBookingUseCase` does not exist.
 
-- [ ] **Step 3: Write ApproveBookingUseCase**
+- [x] **Step 3: Write ApproveBookingUseCase**
 
 Create `src/McpBooking.Application/UseCases/ApproveBookingUseCase.cs`:
 
@@ -2495,12 +2495,12 @@ public class ApproveBookingUseCase
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: All tests PASS.
 
-- [ ] **Step 5: Write Server test**
+- [x] **Step 5: Write Server test**
 
 Create `tests/McpBooking.Server.Tests/Tools/ApproveBookingToolTests.cs`:
 
@@ -2572,12 +2572,12 @@ public class ApproveBookingToolTests
 }
 ```
 
-- [ ] **Step 6: Run test to verify it fails**
+- [x] **Step 6: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Server.Tests`
 Expected: FAIL — `ApproveBookingTool` does not exist.
 
-- [ ] **Step 7: Write ApproveBookingTool**
+- [x] **Step 7: Write ApproveBookingTool**
 
 Create `src/McpBooking.Server/Tools/ApproveBookingTool.cs`:
 
@@ -2657,12 +2657,12 @@ public class ApproveBookingTool
 }
 ```
 
-- [ ] **Step 8: Run all tests**
+- [x] **Step 8: Run all tests**
 
 Run: `dotnet test`
 Expected: All tests PASS.
 
-- [ ] **Step 9: Commit**
+- [x] **Step 9: Commit**
 
 ```bash
 git add src/McpBooking.Application/UseCases/ApproveBookingUseCase.cs src/McpBooking.Server/Tools/ApproveBookingTool.cs tests/McpBooking.Application.Tests/UseCases/ApproveBookingUseCaseTests.cs tests/McpBooking.Server.Tests/Tools/ApproveBookingToolTests.cs
@@ -2679,7 +2679,7 @@ git commit -m "feat(US-011): add approve_booking tool with TDD"
 - Create: `tests/McpBooking.Application.Tests/UseCases/SetBookingPendingUseCaseTests.cs`
 - Create: `tests/McpBooking.Server.Tests/Tools/SetBookingPendingToolTests.cs`
 
-- [ ] **Step 1: Write Application test**
+- [x] **Step 1: Write Application test**
 
 Create `tests/McpBooking.Application.Tests/UseCases/SetBookingPendingUseCaseTests.cs`:
 
@@ -2725,12 +2725,12 @@ public class SetBookingPendingUseCaseTests
 }
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: FAIL — `SetBookingPendingUseCase` does not exist.
 
-- [ ] **Step 3: Write SetBookingPendingUseCase**
+- [x] **Step 3: Write SetBookingPendingUseCase**
 
 Create `src/McpBooking.Application/UseCases/SetBookingPendingUseCase.cs`:
 
@@ -2776,12 +2776,12 @@ public class SetBookingPendingUseCase
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: All tests PASS.
 
-- [ ] **Step 5: Write Server test**
+- [x] **Step 5: Write Server test**
 
 Create `tests/McpBooking.Server.Tests/Tools/SetBookingPendingToolTests.cs`:
 
@@ -2853,12 +2853,12 @@ public class SetBookingPendingToolTests
 }
 ```
 
-- [ ] **Step 6: Run test to verify it fails**
+- [x] **Step 6: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Server.Tests`
 Expected: FAIL — `SetBookingPendingTool` does not exist.
 
-- [ ] **Step 7: Write SetBookingPendingTool**
+- [x] **Step 7: Write SetBookingPendingTool**
 
 Create `src/McpBooking.Server/Tools/SetBookingPendingTool.cs`:
 
@@ -2938,12 +2938,12 @@ public class SetBookingPendingTool
 }
 ```
 
-- [ ] **Step 8: Run all tests**
+- [x] **Step 8: Run all tests**
 
 Run: `dotnet test`
 Expected: All tests PASS.
 
-- [ ] **Step 9: Commit**
+- [x] **Step 9: Commit**
 
 ```bash
 git add src/McpBooking.Application/UseCases/SetBookingPendingUseCase.cs src/McpBooking.Server/Tools/SetBookingPendingTool.cs tests/McpBooking.Application.Tests/UseCases/SetBookingPendingUseCaseTests.cs tests/McpBooking.Server.Tests/Tools/SetBookingPendingToolTests.cs
@@ -2960,7 +2960,7 @@ git commit -m "feat(US-012): add set_booking_pending tool with TDD"
 - Create: `tests/McpBooking.Application.Tests/UseCases/UpdateBookingNoteUseCaseTests.cs`
 - Create: `tests/McpBooking.Server.Tests/Tools/UpdateBookingNoteToolTests.cs`
 
-- [ ] **Step 1: Write Application test**
+- [x] **Step 1: Write Application test**
 
 Create `tests/McpBooking.Application.Tests/UseCases/UpdateBookingNoteUseCaseTests.cs`:
 
@@ -3006,12 +3006,12 @@ public class UpdateBookingNoteUseCaseTests
 }
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: FAIL — `UpdateBookingNoteUseCase` does not exist.
 
-- [ ] **Step 3: Write UpdateBookingNoteUseCase**
+- [x] **Step 3: Write UpdateBookingNoteUseCase**
 
 Create `src/McpBooking.Application/UseCases/UpdateBookingNoteUseCase.cs`:
 
@@ -3059,12 +3059,12 @@ public class UpdateBookingNoteUseCase
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `dotnet test tests/McpBooking.Application.Tests`
 Expected: All tests PASS.
 
-- [ ] **Step 5: Write Server test**
+- [x] **Step 5: Write Server test**
 
 Create `tests/McpBooking.Server.Tests/Tools/UpdateBookingNoteToolTests.cs`:
 
@@ -3146,12 +3146,12 @@ public class UpdateBookingNoteToolTests
 }
 ```
 
-- [ ] **Step 6: Run test to verify it fails**
+- [x] **Step 6: Run test to verify it fails**
 
 Run: `dotnet test tests/McpBooking.Server.Tests`
 Expected: FAIL — `UpdateBookingNoteTool` does not exist.
 
-- [ ] **Step 7: Write UpdateBookingNoteTool**
+- [x] **Step 7: Write UpdateBookingNoteTool**
 
 Create `src/McpBooking.Server/Tools/UpdateBookingNoteTool.cs`:
 
@@ -3234,12 +3234,12 @@ public class UpdateBookingNoteTool
 }
 ```
 
-- [ ] **Step 8: Run all tests**
+- [x] **Step 8: Run all tests**
 
 Run: `dotnet test`
 Expected: All tests PASS.
 
-- [ ] **Step 9: Commit**
+- [x] **Step 9: Commit**
 
 ```bash
 git add src/McpBooking.Application/UseCases/UpdateBookingNoteUseCase.cs src/McpBooking.Server/Tools/UpdateBookingNoteTool.cs tests/McpBooking.Application.Tests/UseCases/UpdateBookingNoteUseCaseTests.cs tests/McpBooking.Server.Tests/Tools/UpdateBookingNoteToolTests.cs
@@ -3253,7 +3253,7 @@ git commit -m "feat(US-013): add update_booking_note tool with TDD"
 **Files:**
 - Modify: `src/McpBooking.Server/Program.cs`
 
-- [ ] **Step 1: Register all 8 booking use cases in Program.cs**
+- [x] **Step 1: Register all 8 booking use cases in Program.cs**
 
 Add after the existing `builder.Services.AddScoped<ListResourcesUseCase>();` line in `src/McpBooking.Server/Program.cs`:
 
@@ -3276,24 +3276,24 @@ using McpBooking.Application.UseCases;
 
 This using likely already exists for `ListResourcesUseCase` — just verify it's there.
 
-- [ ] **Step 2: Verify full build**
+- [x] **Step 2: Verify full build**
 
 Run: `dotnet build`
 Expected: Build succeeds with 0 errors and 0 warnings.
 
-- [ ] **Step 3: Run all tests**
+- [x] **Step 3: Run all tests**
 
 Run: `dotnet test`
 Expected: All tests PASS (10 existing + ~52 new = ~62 total).
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add src/McpBooking.Server/Program.cs
 git commit -m "feat: register all booking use cases in DI container"
 ```
 
-- [ ] **Step 5: Verify final test count**
+- [x] **Step 5: Verify final test count**
 
 Run: `dotnet test --verbosity quiet`
 Expected output should show the total test count (should be ~62+ tests, 0 failed).
