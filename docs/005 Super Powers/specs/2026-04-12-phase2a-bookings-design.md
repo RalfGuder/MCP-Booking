@@ -65,7 +65,7 @@ Phase 2a implementiert 8 MCP-Tools fuer den Bookings-Bereich der WP Booking Cale
 
 **Reihenfolge:** list_bookings, get_booking, create_booking, update_booking, delete_booking, approve_booking, set_booking_pending, update_booking_note.
 
-**Begruendung:** Die GET-Tools (list, get) kommen zuerst, da sie den `BookingApiClient` nur um nichts erweitern und die `Booking`-Entity etablieren. Danach folgen die schreibenden Tools, die nacheinander POST, PUT und DELETE einfuehren.
+**Begruendung:** Die GET-Tools (list, get) kommen zuerst, da sie keine Erweiterung des `BookingApiClient` benoetigen und die `Booking`-Entity etablieren. Danach folgen die schreibenden Tools, die nacheinander POST, PUT und DELETE einfuehren.
 
 ## Domain-Schicht
 
@@ -201,6 +201,13 @@ Drei neue Methoden neben dem bestehenden `GetAsync<T>`:
 public async Task<T?> PostAsync<T>(string path, object body, CancellationToken ct = default)
 {
     var response = await _httpClient.PostAsJsonAsync(path, body, ct);
+    response.EnsureSuccessStatusCode();
+    return await response.Content.ReadFromJsonAsync<T>(ct);
+}
+
+public async Task<T?> PostAsync<T>(string path, CancellationToken ct = default)
+{
+    var response = await _httpClient.PostAsync(path, null, ct);
     response.EnsureSuccessStatusCode();
     return await response.Content.ReadFromJsonAsync<T>(ct);
 }
@@ -399,7 +406,7 @@ Mock: Use Cases via Moq.
 
 ## Dateien-Uebersicht
 
-### Neue Dateien (18)
+### Neue Dateien (20)
 
 | Schicht | Datei |
 |---------|-------|
