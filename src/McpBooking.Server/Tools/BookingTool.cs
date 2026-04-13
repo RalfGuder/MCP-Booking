@@ -70,6 +70,10 @@ public class BookingTool
         {
             return Messages.ErrorServerError;
         }
+        catch (HttpRequestException ex) when (ex.StatusCode.HasValue)
+        {
+            return ex.Message;
+        }
         catch (HttpRequestException)
         {
             return Messages.ErrorApiUnreachable;
@@ -113,6 +117,10 @@ public class BookingTool
         {
             return Messages.ErrorServerError;
         }
+        catch (HttpRequestException ex) when (ex.StatusCode.HasValue)
+        {
+            return ex.Message;
+        }
         catch (HttpRequestException)
         {
             return Messages.ErrorApiUnreachable;
@@ -151,6 +159,10 @@ public class BookingTool
         catch (HttpRequestException ex) when (ex.StatusCode >= HttpStatusCode.InternalServerError)
         {
             return Messages.ErrorServerError;
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode.HasValue)
+        {
+            return ex.Message;
         }
         catch (HttpRequestException)
         {
@@ -195,6 +207,10 @@ public class BookingTool
         {
             return Messages.ErrorServerError;
         }
+        catch (HttpRequestException ex) when (ex.StatusCode.HasValue)
+        {
+            return ex.Message;
+        }
         catch (HttpRequestException)
         {
             return Messages.ErrorApiUnreachable;
@@ -231,6 +247,10 @@ public class BookingTool
         catch (HttpRequestException ex) when (ex.StatusCode >= HttpStatusCode.InternalServerError)
         {
             return Messages.ErrorServerError;
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode.HasValue)
+        {
+            return ex.Message;
         }
         catch (HttpRequestException)
         {
@@ -269,6 +289,10 @@ public class BookingTool
         {
             return Messages.ErrorServerError;
         }
+        catch (HttpRequestException ex) when (ex.StatusCode.HasValue)
+        {
+            return ex.Message;
+        }
         catch (HttpRequestException)
         {
             return Messages.ErrorApiUnreachable;
@@ -305,6 +329,10 @@ public class BookingTool
         catch (HttpRequestException ex) when (ex.StatusCode >= HttpStatusCode.InternalServerError)
         {
             return Messages.ErrorServerError;
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode.HasValue)
+        {
+            return ex.Message;
         }
         catch (HttpRequestException)
         {
@@ -344,6 +372,10 @@ public class BookingTool
         catch (HttpRequestException ex) when (ex.StatusCode >= HttpStatusCode.InternalServerError)
         {
             return Messages.ErrorServerError;
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode.HasValue)
+        {
+            return ex.Message;
         }
         catch (HttpRequestException)
         {

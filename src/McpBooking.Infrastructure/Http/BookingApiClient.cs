@@ -25,7 +25,7 @@ public class BookingApiClient(HttpClient httpClient)
     public async Task<T?> GetAsync<T>(string path, CancellationToken ct = default)
     {
         var response = await _httpClient.GetAsync(path, ct);
-        response.EnsureSuccessStatusCode();
+        await EnsureSuccessAsync(response, ct);
         return await response.Content.ReadFromJsonAsync<T>(ct);
     }
 
@@ -40,7 +40,7 @@ public class BookingApiClient(HttpClient httpClient)
     public async Task<T?> PostAsync<T>(string path, object body, CancellationToken ct = default)
     {
         var response = await _httpClient.PostAsJsonAsync(path, body, ct);
-        response.EnsureSuccessStatusCode();
+        await EnsureSuccessAsync(response, ct);
         return await response.Content.ReadFromJsonAsync<T>(ct);
     }
 
@@ -54,7 +54,7 @@ public class BookingApiClient(HttpClient httpClient)
     public async Task<T?> PostAsync<T>(string path, CancellationToken ct = default)
     {
         var response = await _httpClient.PostAsync(path, null, ct);
-        response.EnsureSuccessStatusCode();
+        await EnsureSuccessAsync(response, ct);
         return await response.Content.ReadFromJsonAsync<T>(ct);
     }
 
@@ -69,7 +69,7 @@ public class BookingApiClient(HttpClient httpClient)
     public async Task<T?> PutAsync<T>(string path, object body, CancellationToken ct = default)
     {
         var response = await _httpClient.PutAsJsonAsync(path, body, ct);
-        response.EnsureSuccessStatusCode();
+        await EnsureSuccessAsync(response, ct);
         return await response.Content.ReadFromJsonAsync<T>(ct);
     }
 
@@ -81,6 +81,18 @@ public class BookingApiClient(HttpClient httpClient)
     public async Task DeleteAsync(string path, CancellationToken ct = default)
     {
         var response = await _httpClient.DeleteAsync(path, ct);
-        response.EnsureSuccessStatusCode();
+        await EnsureSuccessAsync(response, ct);
+    }
+
+    private static async Task EnsureSuccessAsync(HttpResponseMessage response, CancellationToken ct)
+    {
+        if (!response.IsSuccessStatusCode)
+        {
+            var body = await response.Content.ReadAsStringAsync(ct);
+            throw new HttpRequestException(
+                $"HTTP {(int)response.StatusCode} ({response.StatusCode}): {body}",
+                null,
+                response.StatusCode);
+        }
     }
 }
